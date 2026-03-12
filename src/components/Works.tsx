@@ -54,7 +54,7 @@ const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => v
         <div className="flex flex-col md:flex-row border-b border-black/5 shrink-0">
           <div className="md:w-[35%] bg-zinc-100 relative overflow-hidden aspect-video md:aspect-auto">
             <img 
-              src={`https://picsum.photos/seed/${project.title}/800/800`} 
+              src={project.image || `https://picsum.photos/seed/${project.title}/800/800`} 
               alt={project.title}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -172,7 +172,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClick }) =>
     >
       <div className="aspect-video bg-zinc-100 relative overflow-hidden">
         <img 
-          src={`https://picsum.photos/seed/${project.title}/800/450`} 
+          src={project.image || `https://picsum.photos/seed/${project.title}/800/450`} 
           alt={project.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           referrerPolicy="no-referrer"

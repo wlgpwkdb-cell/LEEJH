@@ -12,6 +12,7 @@ export interface Project {
   results: string[];
   links: { name: string; url: string }[];
   tags?: string[];
+  image?: string;
 }
 
 export interface Expertise {
