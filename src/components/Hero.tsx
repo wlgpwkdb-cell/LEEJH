@@ -24,22 +24,7 @@ const Hero = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="mt-20 max-w-4xl mx-auto"
-        >
-          <div className="aspect-[16/9] bg-zinc-200 rounded-[2.5rem] overflow-hidden shadow-2xl relative">
-            <img 
-              src="https://picsum.photos/seed/director/1600/900" 
-              alt="Lee Ji Hye"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          </div>
-        </motion.div>
+
       </div>
       
       {/* Background Rail Text */}
