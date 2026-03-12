@@ -50,24 +50,24 @@ const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => v
         className="bg-white rounded-[3rem] w-full max-w-5xl h-fit shadow-2xl flex flex-col my-auto"
         onClick={e => e.stopPropagation()}
       >
-        {/* Header Section with smaller image ratio */}
-        <div className="flex flex-col md:flex-row border-b border-black/5 shrink-0">
-          <div className="md:w-[35%] bg-zinc-100 relative overflow-hidden aspect-video md:aspect-auto">
+        {/* Header Section - Top Image for 16:9 Video feel */}
+        <div className="flex flex-col border-b border-black/5 shrink-0">
+          <div className={`w-full bg-zinc-100 relative overflow-hidden ${project.aspectRatio || 'aspect-video'}`}>
             <img 
               src={project.image || `https://picsum.photos/seed/${project.title}/800/800`} 
               alt={project.title}
-              className="w-full h-full object-cover"
+              className={`w-full h-full ${project.aspectRatio ? 'object-contain' : 'object-cover'}`}
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-black/10" />
-          </div>
-          <div className="flex-1 p-8 sm:p-12 flex flex-col justify-center relative">
             <button 
               onClick={onClose}
-              className="absolute top-8 right-8 w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-black/40 hover:bg-black hover:text-white transition-all z-10"
+              className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all z-10 border border-white/30"
             >
               <X size={20} />
             </button>
+          </div>
+          <div className="p-8 sm:p-12 relative">
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-600 mb-3 block">{project.category}</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter mb-4">{project.title}</h2>
             <p className="text-sm font-bold text-black/40 uppercase tracking-widest">{project.description}</p>
@@ -170,12 +170,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClick }) =>
       onClick={onClick}
       className="group cursor-pointer bg-white rounded-[2rem] overflow-hidden border border-black/5 shadow-sm hover:shadow-2xl transition-all duration-500"
     >
-      <div className="aspect-video bg-zinc-100 relative overflow-hidden">
+      <div className={`${project.aspectRatio || 'aspect-video'} bg-zinc-100 relative overflow-hidden`}>
         <img 
           src={project.image || `https://picsum.photos/seed/${project.title}/800/450`} 
           alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-          referrerPolicy="no-referrer"
+          className={`w-full h-full ${project.aspectRatio ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-700`}
         />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
           <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30">

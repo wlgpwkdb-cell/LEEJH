@@ -13,6 +13,7 @@ export interface Project {
   links: { name: string; url: string }[];
   tags?: string[];
   image?: string;
+  aspectRatio?: string;
 }
 
 export interface Expertise {

@@ -20,7 +20,7 @@ const Hero = () => {
             {HERO_CONTENT.name}
           </h1>
           <p className="text-base md:text-lg text-black/60 font-medium leading-relaxed max-w-2xl">
-            데이터로 설득하고 콘텐츠 포맷으로 브랜딩하는 <span className="font-extrabold text-black">콘텐츠 디렉터</span>
+            데이터로 설득하고 콘텐츠로 브랜딩하는 <span className="font-extrabold text-black">콘텐츠 디렉터</span>
           </p>
         </motion.div>
 
