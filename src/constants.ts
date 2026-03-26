@@ -25,7 +25,7 @@ export const CORE_EXPERTISE: Expertise[] = [
   },
   {
     title: "연출 및 현장 운영",
-    description: "촬영 흐름과 몰입도를 설계하고,\n현장에서의 디렉팅 및 변수 대응",
+    description: "촬영 흐름과 몰입도를 설계하고\n현장에서의 디렉팅 및 변수 대응",
     projects: []
   },
   {

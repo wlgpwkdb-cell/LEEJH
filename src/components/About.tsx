@@ -59,13 +59,13 @@ export const Expertise = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="p-8 rounded-3xl bg-white border border-black/5 shadow-sm hover:shadow-xl transition-all group"
+              className="h-full p-8 rounded-3xl bg-white border border-black/5 shadow-sm hover:shadow-xl transition-all group flex flex-col"
             >
-              <div className="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shrink-0">
                 <span className="font-mono text-lg font-bold">0{i + 1}</span>
               </div>
-              <h4 className="text-xl font-bold mb-4 tracking-tight whitespace-pre-line">{exp.title}</h4>
-              <p className="text-black/60 mb-6 leading-relaxed whitespace-pre-line">{exp.description}</p>
+              <h4 className="text-[17px] font-bold mb-3 tracking-tight whitespace-pre-line leading-snug">{exp.title}</h4>
+              <p className="text-[13px] text-black/60 leading-relaxed whitespace-pre-line flex-grow">{exp.description}</p>
               <div className="space-y-3">
                 {exp.projects.map((p, j) => (
                   <div key={j} className="flex items-center gap-2 text-sm font-medium text-black/80">
