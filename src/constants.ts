@@ -3,7 +3,7 @@ import { Project, Expertise, WorkExperience } from './types';
 export const HERO_CONTENT = {
   name: "Lee Ji Hye",
   title: "Branded Content Director / Video Strategist",
-  tagline: "데이터로 설득하고 콘텐츠로 브랜딩하는 콘텐츠 디렉터",
+  tagline: "콘텐츠의 ‘재미’와 ‘성과’를 동시에 설계하는 영상 기획자\n브랜드 메시지부터 실행, 성과까지 연결되는 콘텐츠 구조를 만듭니다",
   description: "콘텐츠 전략 수립부터 오리지널 포맷 개발, 영상 제작, 성과 분석까지 콘텐츠의 기획 · 제작 · 운영을 통합적으로 설계합니다."
 };
 
@@ -19,19 +19,24 @@ export const ABOUT_CONTENT = {
 
 export const CORE_EXPERTISE: Expertise[] = [
   {
-    title: "오리지널 콘텐츠 기획 및\n제작 리딩",
-    description: "[체험농협현장], [퇴근하GO] 등\n장기 지속 가능한 콘텐츠를\n기획하고 촬영/편집 전 과정을\n리딩하여 브랜드 로열티 강화",
-    projects: ["기획/촬영/편집 총괄", "브랜드 로열티 강화", "장기 지속 포맷 설계"]
+    title: "콘텐츠 전략 설계",
+    description: "브랜드 메시지와 타겟을 기반으로\n콘텐츠 구조와 포맷 설계",
+    projects: []
   },
   {
-    title: "퍼포먼스 마케팅 및\n채널 성장",
-    description: "SNS 광고 이탈 구간 분석을\n통한 콘텐츠 최적화로\n최고 ROAS 800% 달성",
-    projects: ["최고 ROAS 800% 달성", "1개월 만에 팔로워 1만 명 확보", "단일 영상 조회수 10만 회 이상"]
+    title: "연출 및 현장 운영",
+    description: "촬영 흐름과 몰입도를 설계하고,\n현장에서의 디렉팅 및 변수 대응",
+    projects: []
   },
   {
-    title: "프로세스 최적화 및\n능동적 협업",
-    description: "부서 간 다이렉트 소통 채널\n구축으로 제작 리드타임\n30% 단축",
-    projects: ["제작 리드타임 30% 단축", "인플루언서 협업 가이드라인 수립", "최종 퀄리티 관리 컨트롤 타워"]
+    title: "퍼포먼스 기반 콘텐츠 제작",
+    description: "데이터 분석과 A/B 테스트를 통해\n성과 중심의 콘텐츠 제작",
+    projects: []
+  },
+  {
+    title: "멀티 포맷 경험",
+    description: "웹예능, 라이브, 브랜디드, 방송까지\n플랫폼별 최적화된 콘텐츠 제작 경험",
+    projects: []
   }
 ];
 

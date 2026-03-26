@@ -51,7 +51,7 @@ export const Expertise = () => {
           <h2 className="text-sm font-bold tracking-widest uppercase text-black/40 mb-4">Core Competencies</h2>
           <h3 className="text-3xl font-bold tracking-tight">Core Competencies</h3>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {CORE_EXPERTISE.map((exp, i) => (
             <motion.div
               key={i}

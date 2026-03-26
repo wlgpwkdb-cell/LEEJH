@@ -19,8 +19,9 @@ const Hero = () => {
           <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tighter leading-none mb-10 whitespace-nowrap">
             {HERO_CONTENT.name}
           </h1>
-          <p className="text-base md:text-lg text-black/60 font-medium leading-relaxed max-w-2xl">
-            데이터로 설득하고 콘텐츠로 브랜딩하는 <span className="font-extrabold text-black">콘텐츠 디렉터</span>
+          <p className="text-base md:text-lg text-black/60 font-medium leading-relaxed max-w-2xl whitespace-pre-line">
+            콘텐츠의 ‘재미’와 ‘성과’를 동시에 설계하는 <span className="font-extrabold text-black">영상 기획자</span>{"\n"}
+            브랜드 메시지부터 실행, 성과까지 연결되는 콘텐츠 구조를 만듭니다
           </p>
         </motion.div>
 
