@@ -50,11 +50,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     description: "Performance Campaign",
     intent: "배우 설인아를 모델로 기용한 대규모 브랜드 캠페인 전략을 수립했습니다. 모델의 이미지와 제품의 소구점을 정교하게 매칭시킨 스토리보드를 바탕으로, 데이터 분석을 통한 A/B 테스트용 소재를 다수 제작했습니다. 또한 김씨부부, 승아, 웹툰작가 오창 등 인플루언서 협찬 및 협업을 통해 오리지널 브랜디드 영상 콘텐츠를 생산했습니다.",
     challenge: "다이어트 쉐이크 브랜드 ‘디에트데이’의\n퍼포먼스 광고 캠페인을 기획 및 제작했습니다.\n\n기존 다이어트 광고는 “단기간 체중 감량”을 강조하는\n직관적인 메시지 중심으로 구성되어 있었고,\n\n이로 인해 **광고 피로도가 높고 브랜드 신뢰도와\n차별성이 부족한 문제**가 있었습니다.\n\n또한 제품 인지도 대비 구매 전환율이 낮은 구조를\n개선할 필요가 있었습니다.",
-    approach: "기존의 결과 강조형 광고 구조에서 벗어나,\n사용자의 ‘궁금증을 유발하는 콘텐츠 구조’로\n전략을 전환했습니다.\n\n#### 제품 중심 메시지\n![Before 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png) ![Before 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC6.png)\n\n#### 궁금증 유도형 메시지\n![After 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EC%9A%B0%EC%86%8C%EB%AA%85_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg) ![After 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg)\n\n두 가지 방향의 광고 소재를 제작하여 A/B 테스트를 진행했고\n**궁금증 기반 콘텐츠가 더 높은 클릭률과 시청 유지율을\n보이는 것을 확인했습니다.**\n\n이를 바탕으로 광고 소재 방향을 궁금증 구조 중심으로 전환하고\n퍼포먼스 효율을 최적화했습니다.\n\n또한 배우 설인아를 모델로 기용하여\n건강한 라이프스타일 이미지를 제품과 연결하고,\n브랜드 메시지를 강화했습니다.\n\n**A/B 테스트를 통해 전환율이 높은\n콘텐츠 패턴을 지속적으로 최적화했습니다.**",
+    approach: "기존의 결과 강조형 광고 구조에서 벗어나,\n사용자의 ‘궁금증을 유발하는 콘텐츠 구조’로\n전략을 전환했습니다.\n\n#### 제품 중심 메시지\n![Before 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png) ![Before 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC6.png)\n\n#### 궁금증 유도형 메시지\n![After 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EC%9A%B0%EC%86%8C%EB%AA%85_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg) ![After 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg)\n\n두 가지 방향의 광고 소재를 제작하여\nA/B 테스트를 진행했고\n\n궁금증 유도형 콘텐츠가 기존 제품 중심 광고 대비\n더 높은 클릭률과 시청 유지율을 기록하며\n전환 효율이 높은 구조임을 확인했습니다.\n\n특히 궁금증 기반 메시지는\n제품 정보 중심 광고 대비 사용자 반응(클릭/시청 유지)이\n더 높게 나타났습니다.\n\n이를 바탕으로 광고 소재 방향을 궁금증 구조 중심으로 전환하고\n퍼포먼스 효율을 최적화했습니다.\n\n또한 배우 설인아를 모델로 기용하여\n건강한 라이프스타일 이미지를 제품과 연결하고,\n브랜드 메시지를 강화했습니다.\n\n**A/B 테스트를 통해 전환율이 높은\n콘텐츠 패턴을 지속적으로 최적화했습니다.**",
     execution: [
-      "광고 소재 10종 이상 제작 및 A/B 테스트 진행",
-      "쇼츠/릴스 중심의 퍼포먼스 콘텐츠 구조 설계",
-      "메시지 구조 및 영상 흐름 직접 기획",
+      "A/B 테스트를 통해 성과를 비교 분석",
+      "관심 유도 및 이탈 방지 영상 구조 설계",
       "메인 광고 영상 및 퍼포먼스 소재 제작",
       "인플루언서 협찬 콘텐츠 기획 및 운영"
     ],
