@@ -207,35 +207,6 @@ const Works = () => {
   return (
     <section id="works" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-24 p-12 rounded-[3rem] bg-zinc-50 border border-black/5">
-          <div className="flex flex-col gap-12">
-            <div>
-              <h2 className="text-sm font-bold tracking-widest uppercase text-black/40 mb-4">Results</h2>
-              <h3 className="text-4xl font-bold tracking-tighter leading-tight">
-                Driving Real Business <br />
-                <span className="text-emerald-600">Impact through Data</span>
-              </h3>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {IMPACT_STATS.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  className="p-5 rounded-2xl bg-white border border-black/5 flex flex-col justify-center min-h-[100px]"
-                >
-                  <span className="text-2xl font-bold tracking-tighter mb-1">{stat.value}</span>
-                  <div className="flex flex-col">
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-black/40 mb-0.5">{stat.label}</span>
-                    {stat.sub && <span className="text-[10px] font-bold text-emerald-600 leading-tight">{stat.sub}</span>}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         <div className="space-y-32">
           {PORTFOLIO_CATEGORIES.map((category) => {
             const projects = PORTFOLIO_PROJECTS.filter(p => p.category === category);
