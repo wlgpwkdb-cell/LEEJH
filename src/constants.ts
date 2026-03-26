@@ -41,6 +41,72 @@ export const CORE_EXPERTISE: Expertise[] = [
 ];
 
 export const PORTFOLIO_PROJECTS: Project[] = [
+  // Key Projects (Featured)
+  {
+    title: "디에트데이 (Dietday)",
+    category: "Key Project",
+    role: "→ 캠페인 전략 및 콘텐츠 기획 총괄\n\n→ 크리에이티브 방향 및 메시지 구조 설계\n\n→ 제작 전반 참여 및 실행",
+    roleBreakdown: { planning: 100, filming: 50, editing: 50 },
+    description: "Performance Campaign",
+    intent: "배우 설인아를 모델로 기용한 대규모 브랜드 캠페인 전략을 수립했습니다. 모델의 이미지와 제품의 소구점을 정교하게 매칭시킨 스토리보드를 바탕으로, 데이터 분석을 통한 A/B 테스트용 소재를 다수 제작했습니다. 또한 김씨부부, 승아, 웹툰작가 오창 등 인플루언서 협찬 및 협업을 통해 오리지널 브랜디드 영상 콘텐츠를 생산했습니다.",
+    challenge: "다이어트 쉐이크 브랜드 ‘디에트데이’의\n퍼포먼스 광고 캠페인을 기획 및 제작했습니다.\n\n기존 다이어트 광고는 “단기간 체중 감량”을 강조하는\n직관적인 메시지 중심으로 구성되어 있었고,\n\n이로 인해 **광고 피로도가 높고 브랜드 신뢰도와\n차별성이 부족한 문제**가 있었습니다.\n\n또한 제품 인지도 대비 구매 전환율이 낮은 구조를\n개선할 필요가 있었습니다.",
+    approach: "기존의 결과 강조형 광고 구조에서 벗어나,\n사용자의 ‘궁금증을 유발하는 콘텐츠 구조’로\n전략을 전환했습니다.\n\n#### 제품 중심 메시지\n![Before 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png) ![Before 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC6.png)\n\n#### 궁금증 유도형 메시지\n![After 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EC%9A%B0%EC%86%8C%EB%AA%85_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg) ![After 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg)\n\n두 가지 방향의 광고 소재를 제작하여 A/B 테스트를 진행했고\n**궁금증 기반 콘텐츠가 더 높은 클릭률과 시청 유지율을\n보이는 것을 확인했습니다.**\n\n이를 바탕으로 광고 소재 방향을 궁금증 구조 중심으로 전환하고\n퍼포먼스 효율을 최적화했습니다.\n\n또한 배우 설인아를 모델로 기용하여\n건강한 라이프스타일 이미지를 제품과 연결하고,\n브랜드 메시지를 강화했습니다.\n\n**A/B 테스트를 통해 전환율이 높은\n콘텐츠 패턴을 지속적으로 최적화했습니다.**",
+    execution: [
+      "광고 소재 10종 이상 제작 및 A/B 테스트 진행",
+      "쇼츠/릴스 중심의 퍼포먼스 콘텐츠 구조 설계",
+      "메시지 구조 및 영상 흐름 직접 기획",
+      "메인 광고 영상 및 퍼포먼스 소재 제작",
+      "인플루언서 협찬 콘텐츠 기획 및 운영"
+    ],
+    impact: [
+      "퍼포먼스 마케팅 최적화를 통해 최고 ROAS 800% 달성",
+      "브랜드 검색량 증가 및 자연 유입 확대",
+      "콘텐츠 기반 바이럴 확산 및 전환율 개선"
+    ],
+    results: ["퍼포먼스 마케팅 최적화로 최고 ROAS 800% 달성", "브랜드 검색량 폭발적 증가 및 자발적 바이럴 견인"],
+    image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/DITE.png",
+    links: [
+      { name: "디에트데이 메인 광고", url: "https://www.youtube.com/watch?v=2XjMhD6146o" },
+      { name: "디에트데이 메인 광고 메이킹", url: "https://youtu.be/eg4zZGmml-g?si=YVAy0JcJ7vbqyOHN" },
+      { name: "홈페이지 영상", url: "https://youtube.com/shorts/ZC2di6nNj9U?si=3iZn-32lmSx1iKiS" },
+      { name: "유정 협찬 (블루문美)", url: "https://youtu.be/GvY1jC_FsXQ?si=_2CeIpzehur9_2Qn" },
+      { name: "박가린 협찬 (스타일美)", url: "https://youtu.be/4FP8nq8BcuU?si=GSrix4wFoeCwzoQZ" },
+      { name: "신수지 협찬 (왓츠인마이백)", url: "https://youtu.be/P0fDmv_FH6U?si=GaEsihDyyHGvV0T1" },
+      { name: "김씨부부(인플루언서) 협찬", url: "https://www.instagram.com/p/CmMK7gKpyfz/?hl=ko" },
+      { name: "승아,아싸라비아픽쳐스 협찬", url: "https://www.instagram.com/reel/CmF_3rrrefu/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
+      { name: "오창(웹툰 작가) 협업", url: "https://www.instagram.com/p/CiPP4SVPodg/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
+      { name: "오창 협업 2", url: "https://youtu.be/lwQPWOrAAL8?si=L7ob8PZskAV_fO5b" }
+    ],
+    tags: ["ROAS 800%", "A/B TEST"]
+  },
+  {
+    title: "덕분TV",
+    category: "Key Project",
+    role: "기획 100% / 연출 100% / 편집 50%",
+    roleBreakdown: { planning: 100, filming: 100, editing: 50 },
+    description: "Web Entertainment Format",
+    intent: "기존의 전형적인 무속 콘텐츠 프레임에서 탈피하여, 대중이 가볍고 즐겁게 소비할 수 있는 '웹예능' 포맷을 접목했습니다. 시청자의 호기심을 자극하는 구성과 분위기 있는 현장 연출을 통해 콘텐츠의 몰입도를 극대화했습니다.",
+    results: ["단일 영상 조회수 10만 회 돌파", "신규 구독자 유입 및 채널 활성화 기여"],
+    image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/SINGI.png",
+    links: [
+      { name: "神기로풀었쇼 1부", url: "https://www.youtube.com/watch?v=Ju1LOcvSDMA&pp=ygUS642V67aEVFYg7ZKA7JeI7Ie8" },
+      { name: "神기로풀었쇼 2부", url: "https://www.youtube.com/watch?v=DZ5br4snwzg&pp=ygUS642V67aEVFYg7ZKA7JeI7Ie80gcJCcUKAYcqIYzv" }
+    ],
+    tags: ["조회수 10만+", "FORMAT DESIGN"]
+  },
+  {
+    title: "however",
+    category: "Key Project",
+    role: "사진 촬영 100% / 릴스 제작 100% / 채널 운영 총괄",
+    roleBreakdown: { planning: 100, filming: 100, editing: 100 },
+    description: "SNS Branding & Growth",
+    intent: "신규 브랜드의 빠른 인지도 확산을 위해 SNS 비주얼 디렉팅과 숏폼 중심의 채널 전략을 수립했습니다. 감각적인 사진 촬영과 알고리즘을 타겟팅한 릴스 영상 제작에 집중하여 유저의 '저장'과 '공유'를 유도했습니다.",
+    results: ["인스타그램 개설 1개월 만에 팔로워 1만 명 달성", "단기간 내 강력한 팬덤 확보 및 브랜드 신뢰도 구축"],
+    image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/HOW.png",
+    links: [{ name: "Howerver 인스타그램", url: "https://www.instagram.com/reels/CxM48ECv0fM/" }],
+    tags: ["팔로워 1만", "BRANDING"]
+  },
+
   // Internal Branding
   {
     title: "체험농협현장",
@@ -102,33 +168,6 @@ export const PORTFOLIO_PROJECTS: Project[] = [
 
   // Digital Media & Web Entertainment
   {
-    title: "덕분TV",
-    category: "Digital Media & Web Entertainment",
-    role: "기획 100% / 연출 100% / 편집 50%",
-    roleBreakdown: { planning: 100, filming: 100, editing: 50 },
-    description: "웹예능",
-    intent: "기존의 전형적인 무속 콘텐츠 프레임에서 탈피하여, 대중이 가볍고 즐겁게 소비할 수 있는 '웹예능' 포맷을 접목했습니다. 시청자의 호기심을 자극하는 구성과 분위기 있는 현장 연출을 통해 콘텐츠의 몰입도를 극대화했습니다.",
-    results: ["단일 영상 조회수 10만 회 돌파", "신규 구독자 유입 및 채널 활성화 기여"],
-    image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/SINGI.png",
-    links: [
-      { name: "神기로풀었쇼 1부", url: "https://www.youtube.com/watch?v=Ju1LOcvSDMA&pp=ygUS642V67aEVFYg7ZKA7JeI7Ie8" },
-      { name: "神기로풀었쇼 2부", url: "https://www.youtube.com/watch?v=DZ5br4snwzg&pp=ygUS642V67aEVFYg7ZKA7JeI7Ie80gcJCcUKAYcqIYzv" }
-    ],
-    tags: ["웹예능", "조회수 10만"]
-  },
-  {
-    title: "however",
-    category: "Digital Media & Web Entertainment",
-    role: "사진 촬영 100% / 릴스 제작 100% / 채널 운영 총괄",
-    roleBreakdown: { planning: 100, filming: 100, editing: 100 },
-    description: "SNS 브랜딩 및 채널 성장",
-    intent: "신규 브랜드의 빠른 인지도 확산을 위해 SNS 비주얼 디렉팅과 숏폼 중심의 채널 전략을 수립했습니다. 감각적인 사진 촬영과 알고리즘을 타겟팅한 릴스 영상 제작에 집중하여 유저의 '저장'과 '공유'를 유도했습니다.",
-    results: ["인스타그램 개설 1개월 만에 팔로워 1만 명 달성", "단기간 내 강력한 팬덤 확보 및 브랜드 신뢰도 구축"],
-    image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/HOW.png",
-    links: [{ name: "Howerver 인스타그램", url: "https://www.instagram.com/reels/CxM48ECv0fM/" }],
-    tags: ["SNS 브랜딩", "팔로워 1만"]
-  },
-  {
     title: "수키원장",
     category: "Digital Media & Web Entertainment",
     role: "기획 100% / 촬영 50% / 편집 100%",
@@ -154,29 +193,6 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
 
   // Branded & Performance Marketing
-  {
-    title: "디에트데이 (Dietday)",
-    category: "Branded & Performance Marketing",
-    role: "기획 및 전략 100% / 인플루언서 섭외 100% / 제작 총괄",
-    roleBreakdown: { planning: 100, filming: 50, editing: 50 },
-    description: "통합 캠페인 및 협찬",
-    intent: "배우 설인아를 모델로 기용한 대규모 브랜드 캠페인 전략을 수립했습니다. 모델의 이미지와 제품의 소구점을 정교하게 매칭시킨 스토리보드를 바탕으로, 데이터 분석을 통한 A/B 테스트용 소재를 다수 제작했습니다. 또한 김씨부부, 승아, 웹툰작가 오창 등 인플루언서 협찬 및 협업을 통해 오리지널 브랜디드 영상 콘텐츠를 생산했습니다.",
-    results: ["퍼포먼스 마케팅 최적화로 최고 ROAS 800% 달성", "브랜드 검색량 폭발적 증가 및 자발적 바이럴 견인"],
-    image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/DITE.png",
-    links: [
-      { name: "디에트데이 메인 광고", url: "https://www.youtube.com/watch?v=2XjMhD6146o" },
-      { name: "디에트데이 메인 광고 메이킹", url: "https://youtu.be/eg4zZGmml-g?si=YVAy0JcJ7vbqyOHN" },
-      { name: "홈페이지 영상", url: "https://youtube.com/shorts/ZC2di6nNj9U?si=3iZn-32lmSx1iKiS" },
-      { name: "유정 협찬 (블루문美)", url: "https://youtu.be/GvY1jC_FsXQ?si=_2CeIpzehur9_2Qn" },
-      { name: "박가린 협찬 (스타일美)", url: "https://youtu.be/4FP8nq8BcuU?si=GSrix4wFoeCwzoQZ" },
-      { name: "신수지 협찬 (왓츠인마이백)", url: "https://youtu.be/P0fDmv_FH6U?si=GaEsihDyyHGvV0T1" },
-      { name: "김씨부부(인플루언서) 협찬", url: "https://www.instagram.com/p/CmMK7gKpyfz/?hl=ko" },
-      { name: "승아,아싸라비아픽쳐스 협찬", url: "https://www.instagram.com/reel/CmF_3rrrefu/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
-      { name: "오창(웹툰 작가) 협업", url: "https://www.instagram.com/p/CiPP4SVPodg/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
-      { name: "오창 협업 2", url: "https://youtu.be/lwQPWOrAAL8?si=L7ob8PZskAV_fO5b" }
-    ],
-    tags: ["ROAS 800%", "통합 캠페인"]
-  },
   {
     title: "커머스/F&B 홍보 영상",
     category: "Branded & Performance Marketing",

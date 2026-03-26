@@ -1,6 +1,6 @@
 export interface Project {
   title: string;
-  category: "Internal Branding" | "Digital Media & Web Entertainment" | "Branded & Performance Marketing" | "Public & Media Content";
+  category: "Key Project" | "Internal Branding" | "Digital Media & Web Entertainment" | "Branded & Performance Marketing" | "Public & Media Content";
   role: string;
   roleBreakdown?: {
     planning: number;
@@ -9,6 +9,10 @@ export interface Project {
   };
   description: string;
   intent: string;
+  challenge?: string;
+  approach?: string;
+  execution?: string[];
+  impact?: string[];
   results: string[];
   links: { name: string; url: string }[];
   tags?: string[];

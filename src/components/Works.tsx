@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import Markdown from 'react-markdown';
+import remarkBreaks from 'remark-breaks';
 import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES, IMPACT_STATS } from '../constants';
 import { ExternalLink, Play, Youtube, Instagram, X, ArrowUpRight } from 'lucide-react';
 import { Project } from '../types';
@@ -34,7 +36,7 @@ const RoleGraph = ({ breakdown, title }: { breakdown: any, title?: string }) => 
   );
 };
 
-const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => void }) => {
+export const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => void }) => {
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -79,19 +81,46 @@ const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => v
             <div className="lg:col-span-7 space-y-12">
               <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6 flex items-center gap-2">
-                  <div className="w-4 h-[1px] bg-black/20" /> 기획 의도 및 내용
+                  <div className="w-4 h-[1px] bg-black/20" /> {project.challenge ? 'Challenge' : '기획 의도 및 내용'}
                 </h3>
-                <p className="text-lg text-black/80 leading-relaxed font-medium whitespace-pre-line">
-                  {project.intent}
-                </p>
+                <div className="text-lg text-black/80 leading-relaxed font-medium markdown-content">
+                  <Markdown remarkPlugins={[remarkBreaks]}>{project.challenge || project.intent}</Markdown>
+                </div>
               </section>
+
+              {project.approach && (
+                <section>
+                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6 flex items-center gap-2">
+                    <div className="w-4 h-[1px] bg-black/20" /> Approach
+                  </h3>
+                  <div className="text-lg text-black/80 leading-relaxed font-medium markdown-content">
+                    <Markdown remarkPlugins={[remarkBreaks]}>{project.approach}</Markdown>
+                  </div>
+                </section>
+              )}
+
+              {project.execution && (
+                <section>
+                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6 flex items-center gap-2">
+                    <div className="w-4 h-[1px] bg-black/20" /> Execution
+                  </h3>
+                  <ul className="space-y-4">
+                    {project.execution.map((item, i) => (
+                      <li key={i} className="flex items-start gap-4 text-black/90 font-bold text-base">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
               <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6 flex items-center gap-2">
-                  <div className="w-4 h-[1px] bg-black/20" /> 주요 성과
+                  <div className="w-4 h-[1px] bg-black/20" /> {project.impact ? 'Impact' : '주요 성과'}
                 </h3>
                 <ul className="space-y-4">
-                  {project.results.map((res, i) => (
+                  {(project.impact || project.results).map((res, i) => (
                     <li key={i} className="flex items-start gap-4 text-black/90 font-bold text-base">
                       <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
                       {res}
@@ -105,10 +134,10 @@ const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => v
                   <div className="w-4 h-[1px] bg-black/20" /> Role
                 </h3>
                 <div className="space-y-6">
-                  {['KBS 2TV <아침>', 'NAVER LIVE', '채널A'].includes(project.title) && (
-                    <p className="text-sm font-bold text-black/80 leading-relaxed whitespace-pre-line">
-                      {project.role}
-                    </p>
+                  {(['KBS 2TV <아침>', 'NAVER LIVE', '채널A'].includes(project.title) || project.title === '디에트데이 (Dietday)') && (
+                    <div className="text-sm font-bold text-black/80 leading-relaxed markdown-content">
+                      <Markdown remarkPlugins={[remarkBreaks]}>{project.role}</Markdown>
+                    </div>
                   )}
                   <RoleGraph breakdown={project.roleBreakdown} title={project.title} />
                 </div>
@@ -208,14 +237,14 @@ const Works = () => {
     <section id="works" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="space-y-32">
-          {PORTFOLIO_CATEGORIES.map((category) => {
+          {PORTFOLIO_CATEGORIES.map((category, index) => {
             const projects = PORTFOLIO_PROJECTS.filter(p => p.category === category);
             if (projects.length === 0) return null;
 
             return (
               <div key={category} id={category.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')}>
                 <div className="mb-12">
-                  <h2 className="text-sm font-bold tracking-widest uppercase text-black/40 mb-4">Works</h2>
+                  {index === 0 && <h2 className="text-sm font-bold tracking-widest uppercase text-black/40 mb-4">Works</h2>}
                   <h3 className="text-4xl font-bold tracking-tight">{category}</h3>
                 </div>
 
