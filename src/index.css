@@ -7,13 +7,42 @@
 }
 
 .markdown-content blockquote {
-  border-left: 4px solid #10b981;
-  padding-left: 1.5rem;
+  background-color: #f8fafc;
+  padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
-  background-color: #f9fafb;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.markdown-content blockquote strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  background-color: transparent;
+  padding: 0;
+  color: #065f46;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.markdown-content blockquote strong:first-of-type {
+  font-size: 1.15rem;
+  color: #047857;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+  opacity: 1;
+}
+
+.markdown-content blockquote strong:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Role Section Highlight */
+.lg\:col-span-7 > section:nth-of-type(5) {
+  background-color: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .markdown-content p {
@@ -43,8 +72,8 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .markdown-content h4::before {

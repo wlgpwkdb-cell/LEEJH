@@ -69,16 +69,16 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
               <X size={20} />
             </button>
           </div>
-          <div className="p-8 sm:p-12 relative">
+          <div className="p-6 sm:p-8 relative">
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-600 mb-3 block">{project.category}</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter mb-4">{project.title}</h2>
             <p className="text-sm font-bold text-black/40 uppercase tracking-widest">{project.description}</p>
           </div>
         </div>
 
-        <div className="p-8 sm:p-12">
-          <div className="grid lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-7 space-y-12">
+        <div className="p-6 sm:p-8">
+          <div className="grid lg:grid-cols-12 gap-10">
+            <div className="lg:col-span-7 space-y-8">
               <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6 flex items-center gap-2">
                   <div className="w-4 h-[1px] bg-black/20" /> {project.challenge ? 'Challenge' : '기획 의도 및 내용'}
@@ -234,9 +234,9 @@ const Works = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="works" className="py-24 bg-white">
+    <section id="works" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="space-y-32">
+        <div className="space-y-20">
           {PORTFOLIO_CATEGORIES.map((category, index) => {
             const projects = PORTFOLIO_PROJECTS.filter(p => p.category === category);
             if (projects.length === 0) return null;
