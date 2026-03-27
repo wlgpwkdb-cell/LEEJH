@@ -50,7 +50,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     description: "Performance Campaign",
     intent: "배우 설인아를 모델로 기용한 대규모 브랜드 캠페인 전략을 수립했습니다. 모델의 이미지와 제품의 소구점을 정교하게 매칭시킨 스토리보드를 바탕으로, 데이터 분석을 통한 A/B 테스트용 소재를 다수 제작했습니다. 또한 김씨부부, 승아, 웹툰작가 오창 등 인플루언서 협찬 및 협업을 통해 오리지널 브랜디드 영상 콘텐츠를 생산했습니다.",
     challenge: "다이어트 쉐이크 브랜드 ‘디에트데이’의\n퍼포먼스 광고 캠페인을 기획 및 제작했습니다.\n\n기존 다이어트 광고는 “단기간 체중 감량”을 강조하는\n직관적인 메시지 중심으로 구성되어 있었고,\n\n이로 인해 **광고 피로도가 높고 브랜드 신뢰도와\n차별성이 부족한 문제**가 있었습니다.\n\n또한 제품 인지도 대비 구매 전환율이 낮은 구조를\n개선할 필요가 있었습니다.",
-    approach: "기존의 결과 강조형 광고 구조에서 벗어나,\n사용자의 ‘궁금증을 유발하는 콘텐츠 구조’로\n전략을 전환했습니다.\n\n#### 제품 중심 메시지\n![Before 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png) ![Before 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC6.png)\n\n#### 궁금증 유도형 메시지\n![After 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EC%9A%B0%EC%86%8C%EB%AA%85_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg) ![After 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg)\n\n두 가지 방향의 광고 소재를 제작하여\nA/B 테스트를 진행했습니다.\n\n> **궁금증 유도 콘텐츠**\n>\n> **→ 기존 광고 대비 더 높은 클릭률, 시청 유지율 기록**\n>\n> **→ 전환 효율이 높은 구조임을 검증**\n\n이를 기반으로 광고 전략을 궁금증 중심 구조로 전환하고\n성과 중심으로 콘텐츠를 최적화했습니다.\n\n또한 배우 설인아를 모델로 기용하여\n당시 건강하고 자기관리 이미지와의 적합성을 기반으로\n제품과의 연결성을 강화하고 브랜드 메시지를 명확히 했습니다.",
+    approach: "기존의 결과 강조형 광고 구조에서 벗어나,\n사용자의 ‘궁금증을 유발하는 콘텐츠 구조’로\n전략을 전환했습니다.\n\n#### 제품 중심 메시지\n![Before 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png) ![Before 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC6.png)\n\n#### 궁금증 유도형 메시지\n![After 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EC%9A%B0%EC%86%8C%EB%AA%85_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg) ![After 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg)\n\n두 가지 방향의 광고 소재를 제작하여\nA/B 테스트를 진행했습니다.\n\n> 궁금증 유도 콘텐츠\n>\n> → 기존 광고 대비 더 높은 클릭률, 시청 유지율 기록\n>\n> → 전환 효율이 높은 구조임을 검증\n\n이를 기반으로 광고 전략을 궁금증 중심 구조로 전환하고\n성과 중심으로 콘텐츠를 최적화했습니다.\n\n또한 배우 설인아를 모델로 기용하여\n당시 건강하고 자기관리 이미지와의 적합성을 기반으로\n제품과의 연결성을 강화하고 브랜드 메시지를 명확히 했습니다.",
     execution: [
       "A/B 테스트를 통해 성과를 비교 분석",
       "관심 유도 및 이탈 방지 영상 구조 설계",
@@ -81,10 +81,23 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   {
     title: "덕분TV",
     category: "Key Project",
-    role: "기획 100% / 연출 100% / 편집 50%",
+    role: "→ 콘텐츠 포맷 기획 및 구조 설계\n\n→ 대본 작성 및 토크 흐름 설계\n\n→ 제작 전반 기획 및 실행 총괄",
     roleBreakdown: { planning: 100, filming: 100, editing: 50 },
     description: "Web Entertainment Format",
     intent: "기존의 전형적인 무속 콘텐츠 프레임에서 탈피하여, 대중이 가볍고 즐겁게 소비할 수 있는 '웹예능' 포맷을 접목했습니다. 시청자의 호기심을 자극하는 구성과 분위기 있는 현장 연출을 통해 콘텐츠의 몰입도를 극대화했습니다.",
+    challenge: "기존 덕분TV 콘텐츠는\n무속인을 인터뷰하며 ‘띠별 운세’, ‘재물운’ 등을\n전달하는 정보 전달형 콘텐츠에 집중되어 있었습니다.\n\n이로 인해 콘텐츠 형식이 반복되며\n흥미도와 몰입도가 제한적인 구조였습니다.",
+    approach: "전형적인 무속 정보 전달 방식에서 벗어나\n무속인을 패널화한 웹예능 토크쇼 포맷으로 전환했습니다.\n\n> 무속인 토크쇼\n> → 범죄자 사주, 사회적 이슈 등의 주제로\n> 무속인 간 토론을 유도하여 콘텐츠의 긴장감과 몰입도 강화\n> → 기존 ‘정보 전달형 콘텐츠’를\n> ‘이야기 중심 콘텐츠’로 구조적으로 전환한 프로젝트입니다.",
+    execution: [
+      "콘텐츠 기획 및 포맷 설계 전반 주도",
+      "토크 흐름 및 대본 구성 작성",
+      "촬영 외주 제작사 협업 및 현장 진행",
+      "편집 구성안 설계 및 자막 작성"
+    ],
+    impact: [
+      "단일 영상 조회수 10만 회 이상 달성",
+      "콘텐츠 포맷 확장을 통해 채널 방향성 변화 기여",
+      "이후 유사 포맷의 후속 콘텐츠 지속 제작"
+    ],
     results: ["단일 영상 조회수 10만 회 돌파", "신규 구독자 유입 및 채널 활성화 기여"],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/SINGI.png",
     links: [
@@ -96,10 +109,23 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   {
     title: "however",
     category: "Key Project",
-    role: "사진 촬영 100% / 릴스 제작 100% / 채널 운영 총괄",
+    role: "→ 신규 브랜드 SNS 브랜딩 및 비주얼 디렉팅\n\n→ 숏폼(릴스) 중심의 채널 성장 전략 수립\n\n→ 브랜드 아이덴티티 구축 및 콘텐츠 제작 총괄",
     roleBreakdown: { planning: 100, filming: 100, editing: 100 },
     description: "SNS Branding & Growth",
     intent: "신규 브랜드의 빠른 인지도 확산을 위해 SNS 비주얼 디렉팅과 숏폼 중심의 채널 전략을 수립했습니다. 감각적인 사진 촬영과 알고리즘을 타겟팅한 릴스 영상 제작에 집중하여 유저의 '저장'과 '공유'를 유도했습니다.",
+    challenge: "신규 브랜드로서 시장 내 인지도가 전무한 상태였으며,\n단기간 내에 강력한 팬덤을 확보하고 브랜드 이미지를 구축해야 했습니다.\n\n기존의 정적인 이미지 중심 홍보 방식으로는\n**유저의 즉각적인 반응과 자발적인 확산을 이끌어내기에 부족**했습니다.",
+    approach: "감각적인 비주얼과 알고리즘 최적화 숏폼 콘텐츠를 통해\n유저의 ‘저장’과 ‘공유’를 극대화하는 전략을 실행했습니다.\n\n#### 비주얼 브랜딩 전략\n![however 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/HOW.png)\n\n단순 제품 노출이 아닌, 브랜드가 지향하는 라이프스타일을 시각화하고\n릴스 알고리즘을 타겟팅한 트렌디한 영상 구조를 설계했습니다.\n\n> SNS 브랜딩 성과\n>\n> → 인스타그램 개설 1개월 만에 팔로워 1만 명 달성\n>\n> → 단기간 내 강력한 팬덤 확보 및 브랜드 신뢰도 구축",
+    execution: [
+      "브랜드 아이덴티티에 맞춘 비주얼 디렉팅",
+      "알고리즘 최적화 릴스 콘텐츠 기획 및 제작",
+      "고감도 브랜드 사진 촬영 및 SNS 피드 구성",
+      "유저 참여 유도를 위한 커뮤니티 운영 전략"
+    ],
+    impact: [
+      "개설 1개월 만에 팔로워 1만 명 달성으로 초기 시장 안착",
+      "높은 저장 수와 공유 수를 통한 자연스러운 바이럴 확산",
+      "브랜드 무드에 최적화된 팬덤 커뮤니티 형성"
+    ],
     results: ["인스타그램 개설 1개월 만에 팔로워 1만 명 달성", "단기간 내 강력한 팬덤 확보 및 브랜드 신뢰도 구축"],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/HOW.png",
     links: [{ name: "Howerver 인스타그램", url: "https://www.instagram.com/reels/CxM48ECv0fM/" }],

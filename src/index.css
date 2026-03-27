@@ -10,18 +10,30 @@
   background-color: #f8fafc;
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.03);
+  font-size: 0.925rem;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #065f46;
+}
+
+.markdown-content blockquote p {
+  margin-bottom: 0.75rem;
+}
+
+.markdown-content blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 .markdown-content blockquote strong {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
   background-color: transparent;
   padding: 0;
   color: #065f46;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 .markdown-content blockquote strong:first-of-type {
@@ -41,8 +53,12 @@
 .lg\:col-span-7 > section:nth-of-type(5) {
   background-color: #f8fafc;
   padding: 1.25rem 1.5rem;
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.markdown-content {
+  line-height: 1.8;
 }
 
 .markdown-content p {

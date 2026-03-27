@@ -134,7 +134,7 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
                   <div className="w-4 h-[1px] bg-black/20" /> Role
                 </h3>
                 <div className="space-y-6">
-                  {(['KBS 2TV <아침>', 'NAVER LIVE', '채널A'].includes(project.title) || project.title === '디에트데이 (Dietday)') && (
+                  {(project.category === 'Key Project' || ['KBS 2TV <아침>', 'NAVER LIVE', '채널A'].includes(project.title)) && (
                     <div className="text-sm font-bold text-black/80 leading-relaxed markdown-content">
                       <Markdown remarkPlugins={[remarkBreaks]}>{project.role}</Markdown>
                     </div>
