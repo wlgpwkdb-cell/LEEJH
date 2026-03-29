@@ -240,8 +240,12 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     role: "기획 100% / 촬영 50% / 편집 50%",
     roleBreakdown: { planning: 100, filming: 50, editing: 50 },
     description: "아티스트 콘텐츠",
-    intent: "아티스트가 가진 고유의 매력을 화보 이상의 생동감 넘치는 영상으로 담아내어, 팬덤의 니즈를 충족시키고 플랫폼의 디지털 도달 범위를 확장하기 위해 기획되었습니다. 스타 화보 메이킹 영상과 트렌디한 인터뷰 세션(왓츠인마이백, 밸런스 게임 등)을 결합하여, 아티스트의 자연스러운 모습과 전문적인 화보 촬영 현장을 유기적으로 연결하는 뉴미디어 콘텐츠를 구축했습니다.",
-    results: ["높은 조회수와 활발한 SNS 공유 유발", "플랫폼 도달률 획기적 확장 및 대표 코너 안착"],
+    challenge: "아티스트의 매력을 정적인 화보를 넘어\n영상 콘텐츠로 확장하여 팬덤의 몰입도를 높이고\n플랫폼 도달 범위를 확대하기 위해 기획된 콘텐츠",
+    approach: "화보 메이킹 영상과 인터뷰 콘텐츠를 결합하여\n아티스트의 자연스러운 모습과 촬영 현장을\n유기적으로 연결하는 구조로 설계\n\n→ 왓츠인마이백, 밸런스 게임 등 트렌디한 포맷 적용\n→ 팬덤이 선호하는 비하인드와 인터뷰 요소 결합",
+    impact: [
+      "아티스트 콘텐츠의 디지털 확장 및 팬덤 반응 확보",
+      "높은 조회수와 활발한 SNS 공유 유발"
+    ],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/STAR1.png",
     links: [{ name: "앳스타일", url: "https://www.youtube.com/watch?v=j3UJ2ahoT9A" }],
     tags: ["아티스트 콘텐츠", "뉴미디어"]
