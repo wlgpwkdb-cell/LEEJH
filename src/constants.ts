@@ -177,7 +177,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     description: "사내 커뮤니티 활성화 예능",
     intent: "직원들의 '워라밸'을 존중하고 건강한 사내 커뮤니티 형성을 위해 기획되었습니다. 기존의 단순 홍보 방식에서 탈피하여 유쾌한 예능 포맷을 도입, 업무 외 시간에도 동료들과 취미를 공유하며 소통할 수 있는 장을 마련함으로써 경직된 사내 분위기를 유연하게 바꾸고자 했습니다.",
     challenge: "출연자가 1일 동호회원이 되어\n전국 농협 사내 동아리를 직접 체험하며 소개하는 예능 콘텐츠.",
-    approach: "단순 정보 전달 방식에서 벗어나\n예능 포맷을 도입하여 직원 참여 중심 구조로 전환",
+    approach: "체험형 예능 포맷을 도입하여\n직원 참여 중심 콘텐츠로 구조를 전환했습니다.\n\n→ 자발적인 참여와 공감을 유도",
     results: ["신규 동호회 가입률 40% 이상 폭증", "사내 최고의 화제성 및 실질적인 사내 소통 활성화 견인"],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/GO.png",
     links: [
@@ -221,10 +221,17 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     role: "기획 100% / 촬영 50% / 편집 100%",
     roleBreakdown: { planning: 100, filming: 50, editing: 100 },
     description: "유튜브 리얼리티 시리즈",
-    intent: "전문적인 지식을 리얼리티 포맷과 결합하여 시청자들에게 신뢰를 주고 지속 가능한 정보성 시리즈를 구축하고자 했습니다. 단순히 정보를 전달하는 것에 그치지 않고, 체형 고민이 있는 출연자들의 변화 과정을 가감 없이 담아내며 라이프스타일까지 세심하게 관찰하고 피드백하는 진정성 있는 접근 방식을 택했습니다.",
-    results: ["시청자 호응으로 시즌 2 제작 확정", "성공적인 정보성 채널 브랜딩 구축"],
+    challenge: "전문적인 건강/체형 정보를 시청자가 신뢰하고\n지속적으로 소비할 수 있도록 기획된 리얼리티 기반 콘텐츠",
+    approach: "단순 정보 전달에서 벗어나\n리얼리티 포맷을 결합하여 신뢰와 몰입도를\n동시에 확보하는 구조로 설계\n\n→ 출연자의 체형 고민과 변화 과정을 중심으로 구성\n→ 라이프스타일 변화까지 담아내는 콘텐츠 방식 적용",
+    impact: [
+      "정보 콘텐츠의 신뢰도 및 몰입도 확보",
+      "지속 가능한 시리즈 콘텐츠 구조 구축"
+    ],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/SUKI.png",
-    links: [{ name: "수키원장", url: "https://www.youtube.com/watch?v=l1_JaKIHYwY" }],
+    links: [
+      { name: "수키원장", url: "https://www.youtube.com/watch?v=l1_JaKIHYwY" },
+      { name: "ebody", url: "https://www.ebody.kr/" }
+    ],
     tags: ["유튜브 리얼리티", "시즌제"]
   },
   {
