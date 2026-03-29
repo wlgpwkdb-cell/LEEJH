@@ -135,7 +135,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     tags: ["팔로워 1만", "BRANDING"]
   },
 
-  // Internal Branding
+  // Internal Content & Communication
   {
     title: "체험농협현장",
     category: "Key Project",
@@ -171,11 +171,13 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     title: "퇴근하GO",
-    category: "Internal Branding",
+    category: "Internal Content",
     role: "기획 100% / 연출 100% / 편집 90% (CG 제외)",
     roleBreakdown: { planning: 100, filming: 100, editing: 90 },
     description: "사내 커뮤니티 활성화 예능",
     intent: "직원들의 '워라밸'을 존중하고 건강한 사내 커뮤니티 형성을 위해 기획되었습니다. 기존의 단순 홍보 방식에서 탈피하여 유쾌한 예능 포맷을 도입, 업무 외 시간에도 동료들과 취미를 공유하며 소통할 수 있는 장을 마련함으로써 경직된 사내 분위기를 유연하게 바꾸고자 했습니다.",
+    challenge: "출연자가 1일 동호회원이 되어\n전국 농협 사내 동아리를 직접 체험하며 소개하는 예능 콘텐츠.",
+    approach: "단순 정보 전달 방식에서 벗어나\n예능 포맷을 도입하여 직원 참여 중심 구조로 전환",
     results: ["신규 동호회 가입률 40% 이상 폭증", "사내 최고의 화제성 및 실질적인 사내 소통 활성화 견인"],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/GO.png",
     links: [
@@ -190,7 +192,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     title: "다은이가 알려줄게",
-    category: "Internal Branding",
+    category: "Internal Content",
     role: "기획 100% / 촬영 50% / 편집 100%",
     roleBreakdown: { planning: 100, filming: 50, editing: 100 },
     description: "정보 전달",
@@ -208,10 +210,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     tags: ["정보전달", "사내복지"]
   },
 
-  // Digital Media & Web Entertainment
+  // Web & Format Content
   {
     title: "수키원장",
-    category: "Digital Media & Web Entertainment",
+    category: "Web & Format Content",
     role: "기획 100% / 촬영 50% / 편집 100%",
     roleBreakdown: { planning: 100, filming: 50, editing: 100 },
     description: "유튜브 리얼리티 시리즈",
@@ -223,7 +225,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     title: "NEWSEN 앳스타일 (STAR 1)",
-    category: "Digital Media & Web Entertainment",
+    category: "Web & Format Content",
     role: "기획 100% / 촬영 50% / 편집 50%",
     roleBreakdown: { planning: 100, filming: 50, editing: 50 },
     description: "아티스트 콘텐츠",
@@ -234,10 +236,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     tags: ["아티스트 콘텐츠", "뉴미디어"]
   },
 
-  // Branded & Performance Marketing
+  // Brand Content
   {
     title: "커머스/F&B 홍보 영상",
-    category: "Branded & Performance Marketing",
+    category: "Brand Content",
     role: "기획 및 제작 100%",
     roleBreakdown: { planning: 100, filming: 100, editing: 100 },
     description: "다양한 브랜드 홍보 영상",
@@ -254,11 +256,9 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     ],
     tags: ["커머스", "F&B", "매출전환"]
   },
-
-  // Public & Media Content
   {
     title: "서정대학교",
-    category: "Public & Media Content",
+    category: "Brand Content",
     role: "기획 100% / 제작(가편) 50%",
     roleBreakdown: { planning: 100, filming: 50, editing: 50 },
     description: "HiVE 사업 성과 홍보 영상",
@@ -270,7 +270,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     title: "대명 아임레디",
-    category: "Public & Media Content",
+    category: "Brand Content",
     role: "기획 및 대본 100% / 현장 연출 50%",
     roleBreakdown: { planning: 100, filming: 50, editing: 0 },
     description: "브랜디드 퀴즈 쇼",
@@ -280,9 +280,11 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     links: [{ name: "대명 아임레디 보험 영상", url: "https://www.youtube.com/watch?v=akyYzi_N6XY" }],
     tags: ["퀴즈쇼", "브랜디드 콘텐츠"]
   },
+
+  // Media & Broadcast Content
   {
     title: "채널A",
-    category: "Public & Media Content",
+    category: "Broadcast Content",
     role: "방송 준비 및 진행\nFD - 생방송 스튜디오 총괄 관리 / 출연자 및 소품 관리\nAD - 자료 조사 및 CG제작 의뢰",
     description: "보도 프로그램 제작",
     intent: "긴박하게 돌아가는 뉴스 현장의 소식을 실시간으로 전달하며, 정확한 팩트 체크와 매끄러운 방송 진행을 통해 보도 매체로서의 신뢰성을 확보하고자 했습니다. <뉴스 A 라이브>, <정치데스크> 등 주요 보도 프로그램의 제작진으로서 초 단위의 긴장감이 흐르는 현장을 서포트했습니다.",
@@ -297,7 +299,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     title: "NAVER LIVE",
-    category: "Public & Media Content",
+    category: "Broadcast Content",
     role: "방송 준비 및 진행 보조 / 출연자 및 소품 관리 / 댓글 관리",
     description: "모바일 라이브 소통 콘텐츠",
     intent: "모바일 플랫폼 성장에 발맞추어, 정형화된 TV 방송에서 벗어나 시청자와 실시간으로 양방향 소통하는 새로운 포맷의 가능성을 확인하고자 기획되었습니다. 2016년 모바일 라이브 방송의 초기 단계에서 진행된 요리 콘텐츠로, 단순 구매 유도보다는 채팅을 통한 즉각적인 피드백과 소통 자체에 집중했습니다.",
@@ -308,7 +310,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     title: "KBS 2TV <아침>",
-    category: "Public & Media Content",
+    category: "Broadcast Content",
     role: "자료 조사 / 촬영 보조 / 편집 보조 / 예고편 제작",
     description: "정보 프로그램 조연출",
     intent: "매일 아침 시청자들에게 신뢰할 수 있는 생활 정보와 감동적인 사연을 신속·정확하게 전달하여 삶의 활력을 제공하는 데 목적을 두었습니다. 공영방송의 고품질 기준에 맞춘 데일리 콘텐츠 제작을 목표로 했습니다.",
@@ -320,10 +322,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
 ];
 
 export const PORTFOLIO_CATEGORIES = [
-  "Internal Branding",
-  "Digital Media & Web Entertainment",
-  "Branded & Performance Marketing",
-  "Public & Media Content"
+  "Internal Content",
+  "Web & Format Content",
+  "Brand Content",
+  "Broadcast Content"
 ] as const;
 
 export const PRODUCTION_PROCESS = [
