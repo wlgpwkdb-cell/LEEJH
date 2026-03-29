@@ -196,8 +196,12 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     role: "기획 100% / 촬영 50% / 편집 100%",
     roleBreakdown: { planning: 100, filming: 50, editing: 100 },
     description: "정보 전달",
-    intent: "복잡하고 딱딱한 사내 제도, 규정, 복지 혜택 등을 모든 임직원이 쉽게 이해하고 혜택을 누릴 수 있도록 정보 격차 해소를 위해 기획되었습니다. 정보 전달에 최적화된 스튜디오 진행과 생생한 현장 VCR을 결합하고, 직관적인 연출을 가미하여 시청자의 지루함을 방지했습니다.",
-    results: ["'사내 정보 가이드의 표준'으로 안착", "임직원 제도 이해도 및 복지 활용 지표 획기적 개선"],
+    challenge: "복잡하고 딱딱한 사내 제도와 복지 정보를\n임직원이 쉽게 이해하고 활용할 수 있도록 기획된 콘텐츠.",
+    approach: "정보 전달에 최적화된 구조로 설계하고\n스튜디오 진행과 현장 VCR을 결합하여\n이해도와 몰입도를 동시에 높였습니다.\n\n→ 핵심 정보 중심 구성 + 직관적인 연출 적용\n→ 지루함을 줄이고 정보 접근성을 강화한 콘텐츠 구조 설계",
+    impact: [
+      "사내 정보 콘텐츠의 표준 포맷으로 정착",
+      "직원 제도 이해도 및 활용도 개선"
+    ],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/NH_DA.png",
     links: [
       { name: "농협쌀 수출 이야기", url: "http://www.nhtv.co.kr/vodView.hu?file_idx=974&&sText=&cateCode=2020&nowPage=13" },
