@@ -129,17 +129,30 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
                 </ul>
               </section>
 
+              {project.insight && (
+                <section>
+                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6 flex items-center gap-2">
+                    <div className="w-4 h-[1px] bg-black/20" /> Insight
+                  </h3>
+                  <div className="bg-[#f8fafc] p-6 rounded-[1.25rem] border border-black/5 text-[0.925rem] font-bold text-[#065f46] leading-relaxed markdown-content">
+                    <Markdown remarkPlugins={[remarkBreaks]}>{project.insight}</Markdown>
+                  </div>
+                </section>
+              )}
+
               <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6 flex items-center gap-2">
                   <div className="w-4 h-[1px] bg-black/20" /> Role
                 </h3>
                 <div className="space-y-6">
                   {(project.category === 'Key Project' || ['KBS 2TV <아침>', 'NAVER LIVE', '채널A'].includes(project.title)) && (
-                    <div className="text-sm font-bold text-black/80 leading-relaxed markdown-content">
+                    <div className="text-[0.925rem] font-bold text-black/80 leading-relaxed markdown-content px-2">
                       <Markdown remarkPlugins={[remarkBreaks]}>{project.role}</Markdown>
                     </div>
                   )}
-                  <RoleGraph breakdown={project.roleBreakdown} title={project.title} />
+                  <div className="bg-[#f8fafc] p-8 rounded-[1.25rem] border border-black/5">
+                    <RoleGraph breakdown={project.roleBreakdown} title={project.title} />
+                  </div>
                 </div>
               </section>
             </div>

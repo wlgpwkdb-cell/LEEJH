@@ -13,6 +13,7 @@ export interface Project {
   approach?: string;
   execution?: string[];
   impact?: string[];
+  insight?: string;
   results: string[];
   links: { name: string; url: string }[];
   tags?: string[];

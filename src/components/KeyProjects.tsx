@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index, onClick }: { project: Project; index: num
         </div>
         <div className="flex flex-wrap gap-2">
           {project.tags?.map((tag, i) => {
-            const isLarge = ['ROAS 800%', '조회수 10만+', '팔로워 1만'].includes(tag);
+            const isLarge = ['ROAS 800%', '조회수 10만+', '팔로워 1만', '조직연결', '사내 콘텐츠 혁신'].includes(tag);
             return (
               <span 
                 key={i} 
@@ -66,7 +66,7 @@ const KeyProjects = () => {
           <h3 className="text-4xl font-bold tracking-tight">Key Projects</h3>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-2 gap-10">
           {keyProjects.map((project, i) => (
             <div key={project.title}>
               <ProjectCard 
