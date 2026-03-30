@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Markdown from 'react-markdown';
 import remarkBreaks from 'remark-breaks';
@@ -37,6 +37,13 @@ const RoleGraph = ({ breakdown, title }: { breakdown: any, title?: string }) => 
 };
 
 export const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => void }) => {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
