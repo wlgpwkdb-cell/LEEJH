@@ -45,25 +45,27 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   {
     title: "디에트데이 (Dietday)",
     category: "Key Project",
-    role: "→ 캠페인 전략 및 콘텐츠 기획 총괄\n\n→ 크리에이티브 방향 및 메시지 구조 설계\n\n→ 성과 개선을 위한 콘텐츠 구조 설계 주도\n\n→ 제작 전반 참여 및 실행",
+    role: "→ 문제 정의 및 가설 수립\n\n→ A/B 테스트 설계 및 운영\n\n→ 콘텐츠 구조 설계\n\n→ 성과 확장 전략 수립",
     roleBreakdown: { planning: 100, filming: 50, editing: 50 },
     description: "Performance Campaign",
-    intent: "배우 설인아를 모델로 기용한 대규모 브랜드 캠페인 전략을 수립했습니다. 모델의 이미지와 제품의 소구점을 정교하게 매칭시킨 스토리보드를 바탕으로, 데이터 분석을 통한 A/B 테스트용 소재를 다수 제작했습니다. 또한 김씨부부, 승아, 웹툰작가 오창 등 인플루언서 협찬 및 협업을 통해 오리지널 브랜디드 영상 콘텐츠를 생산했습니다.",
-    challenge: "기존 다이어트 광고는 “단기간 감량”과 같은\n결과 중심 메시지에 집중되어 있었고,\n\n유사한 구조가 반복되면서 사용자 피로도가 높고\n차별성이 부족한 상태였습니다.\n\n이로 인해 콘텐츠는 노출되더라도\n실제 구매로 이어지는 전환 효율이 낮은 구조였습니다.",
-    approach: "사용자의 시청 지속 시간과 반응을 확보하기 위해\n기존 제품 중심 콘텐츠 대신\n‘궁금증 유도형 콘텐츠’로 전략을 전환했습니다.\n\n이를 검증하기 위해 두 가지 방향의 광고 소재를 제작하여\nA/B 테스트를 진행했습니다.\n\n#### 제품 중심 메시지\n![Before 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png) ![Before 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC6.png)\n\n#### 궁금증 유도형 메시지\n![After 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EC%9A%B0%EC%86%8C%EB%AA%85_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg) ![After 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg)\n\n> 궁금증 유도 콘텐츠\n>\n> → 기존 광고 대비 더 높은 클릭률, 시청 유지율 기록\n>\n> → 전환 효율이 높은 구조임을 검증\n\n이를 기반으로 광고 전략을 궁금증 중심 구조로 전환하고\n성과 중심으로 콘텐츠를 최적화했습니다.\n\n또한 배우 설인아를 모델로 기용하여\n당시 건강하고 자기관리 이미지와의 적합성을 기반으로\n제품과의 연결성을 강화하고 브랜드 메시지를 명확히 했습니다.",
+    intent: "> 광고 효율이 아니라 **시청 구조를 바꿨습니다**\n\nROAS 100~200%에서 정체된 다이어트 캠페인을 콘텐츠 구조만 변경해 최대 **800%까지 개선한 프로젝트**입니다.\n\n- 제품 / 타겟 / 예산 / 랜딩 동일\n- 변경 변수: **콘텐츠 구조**\n\n👉 성과를 바꾼 건 메시지가 아니라\n👉 **사용자의 시청 흐름 설계**",
+    challenge: "기존 광고 구조는 전형적이었습니다.\n\n- 초반 결과 노출\n- 제품 효과 & 후기 중심\n- 빠른 설득 구조\n\n하지만 데이터는 전혀 다르게 말하고 있었습니다.\n\n> ❗ 문제는 설득력이 아니었습니다\n\n- 3초 이탈률 60%+\n- 5초 구간 유지율 급락\n- 핵심 메시지 이전 대부분 이탈\n\n👉 **설득이 시작되기 전에 시청이 끝나는 구조**",
+    approach: "문제를 이렇게 다시 정의했습니다.\n\n> ❌ 무엇을 말할 것인가\n> ⭕ 사용자가 어디까지 보게 만들 것인가\n\n그리고 가설을 세웠습니다.\n\n> 👉 결과가 아니라\n> 👉 **이유를 따라가게 만들면 시청이 유지된다**\n\n### 퍼널 구조\n시청 유지율 ↑ → 메시지 도달 ↑ → CTR ↑ → CVR / ROAS ↑\n\n---\n\n### 왜 이 방법인가 (Why This Way)\n\n검토했던 대안들:\n- 후킹 문구 개선\n- 메시지 리라이팅\n- 신규 촬영\n\n하지만 선택하지 않았습니다.\n\n> 👉 이탈이 메시지 이전에 발생했기 때문\n> 👉 메시지를 바꿔도 문제는 그대로\n\n또한\n> 👉 추가 촬영 없이 빠르게 검증해야 하는 상황\n\n그래서 결론은 하나였습니다.\n👉 **구조를 바꾸는 것이 가장 현실적인 해결책**\n\n---\n\n### A/B 테스트 (A/B Testing)\n\n**A안 (기존)**: 결과 선노출 → 빠른 판단 → 빠른 이탈\n![Before 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png) ![Before 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/230809_%EC%89%90%EC%9D%B4%ED%81%AC6.png)\n\n**B안 (개선)**: 질문형 시작 → 과정 중심 전개 → 시청 유지\n![After 1](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EC%9A%B0%EC%86%8C%EB%AA%85_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg) ![After 2](https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/063229e2ee0ba61462f234520e5bde3bcccc8ef3/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg)",
     execution: [
-      "A/B 테스트를 통해 성과를 비교 분석",
-      "관심 유도 및 이탈 방지 영상 구조 설계",
-      "메인 광고 영상 기획 및 퍼포먼스 소재 제작",
-      "인플루언서 협찬 콘텐츠 기획 및 운영"
+      "전략: 끝까지 보게 만드는 흐름 설계 (결과 선노출 제거, 질문형 Hook 시작, 문제→과정→결과 순)",
+      "성과 기준 재정의: 초반(유지율) → 중간(CTR) → 최종(CVR/ROAS) 퍼널 병목 기준 판단",
+      "실행: 기존 소재 재편집 (추가 촬영 없음), A/B 테스트 기반 반복 검증",
+      "확장: 유지율 & CTR 기준 성과 선별 및 구조를 다양한 포맷으로 확장"
     ],
     impact: [
-      "퍼포먼스 마케팅 최적화를 통해 최고 ROAS 800% 달성",
-      "브랜드 검색량 증가 및 자연 유입 확대",
-      "콘텐츠 기반 바이럴 확산 및 전환율 개선"
+      "3초 유지율: +10~20%p 개선",
+      "5초 유지율: +15%p 개선",
+      "CTR: 약 1.5배 상승",
+      "CVR: 약 1.3~1.5배 상승",
+      "ROAS: 100~200% → 최대 800% 달성"
     ],
-    insight: "퍼포먼스 콘텐츠에서 중요한 것은 단순한 정보 전달이 아니라\n사용자의 행동을 유도하는 ‘콘텐츠 구조’라는 것을 확인했습니다.\n\n특히 같은 제품이라도 메시지 구조에 따라\n클릭률과 전환 효율이 크게 달라진다는 점에서,\n데이터 기반으로 콘텐츠 방향을 설계하는 것이 중요하다는\n인사이트를 얻었습니다.",
-    results: ["퍼포먼스 마케팅 최적화로 최고 ROAS 800% 달성", "브랜드 검색량 폭발적 증가 및 자발적 바이럴 견인"],
+    insight: "성과는 메시지 이후가 아니라 **시청 경험에서 먼저 결정된다**는 것을 확인했습니다.\n\n좋은 메시지가 중요한 게 아니라, **메시지에 도달하게 만드는 구조가 성과를 만든다**는 것이 핵심 결론입니다.",
+    results: ["구조 변경만으로 퍼널 전체 개선", "ROAS 최대 800% 달성"],
     image: "https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/559ee3ca6e6de7fcc25c85dada483ad8f20310a4/DITE.png",
     links: [
       { name: "디에트데이 메인 광고", url: "https://www.youtube.com/watch?v=2XjMhD6146o" },
@@ -77,7 +79,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       { name: "오창(웹툰 작가) 협업", url: "https://www.instagram.com/p/CiPP4SVPodg/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
       { name: "오창 협업 2", url: "https://youtu.be/lwQPWOrAAL8?si=L7ob8PZskAV_fO5b" }
     ],
-    tags: ["ROAS 800%", "A/B TEST"]
+    tags: ["ROAS 800%", "A/B TEST", "구조 설계"]
   },
   {
     title: "덕분TV",
