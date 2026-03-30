@@ -192,7 +192,7 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
           <div className="space-y-6">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-lg">💡</span>
-              <h4 className="text-base font-black tracking-tight">접근 방식</h4>
+              <h4 className="text-base font-black tracking-tight">기존 광고</h4>
             </div>
             <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full" style={{ paddingTop: '32px', paddingBottom: '35px', marginLeft: '0px', height: '555.5px' }}>
               <div className="space-y-6 px-8">

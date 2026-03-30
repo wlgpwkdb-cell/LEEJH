@@ -79,7 +79,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       { name: "오창(웹툰 작가) 협업", url: "https://www.instagram.com/p/CiPP4SVPodg/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" },
       { name: "오창 협업 2", url: "https://youtu.be/lwQPWOrAAL8?si=L7ob8PZskAV_fO5b" }
     ],
-    tags: ["ROAS 800%", "A/B TEST", "구조 설계"]
+    tags: ["ROAS 800%", "A/B TEST"]
   },
   {
     title: "덕분TV",
