@@ -16,7 +16,7 @@ const Navbar = () => {
           {[
             { label: 'About', href: '#expertise' },
             { label: 'Key Project', href: '#key-projects' },
-            { label: 'Works', href: '#internal-branding' },
+            { label: 'Works', href: '#works' },
             { label: 'Workflow', href: '#process' },
             { label: 'Contact', href: '#contact' }
           ].map((item) => (
