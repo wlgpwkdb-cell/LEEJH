@@ -82,8 +82,8 @@ const DietdayChart = () => {
   ];
 
   return (
-    <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm mt-6 overflow-x-auto" style={{ height: '437.5px' }}>
-      <div className="min-w-[700px] relative flex items-end justify-between px-8 pb-12 border-b border-[#545e6b]/30" style={{ height: '302px' }}>
+    <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm mt-6 overflow-x-auto min-h-[350px] sm:min-h-[437.5px]">
+      <div className="min-w-[700px] relative flex items-end justify-between px-8 pb-12 border-b border-[#545e6b]/30 min-h-[250px] sm:min-h-[302px]">
         {metrics.map((m, idx) => (
           <div key={m.label} className="flex flex-col items-center flex-1 relative">
             {/* Badge */}
@@ -129,7 +129,7 @@ const DietdayChart = () => {
       </div>
       
       {/* Legend */}
-      <div className="flex justify-center gap-8" style={{ height: '17.5px', paddingTop: '0px', marginTop: '34px' }}>
+      <div className="flex justify-center gap-8 pt-0 mt-[34px] min-h-[17.5px]">
         <div className="flex items-center gap-2.5">
           <div className="w-4 h-4 bg-[#545e6b] rounded-sm" />
           <span className="text-[11px] font-bold text-[#545e6b]/60 uppercase tracking-widest">A (기존)</span>
@@ -149,7 +149,7 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
       {/* Left Column */}
       <div className="lg:col-span-8 space-y-12">
         {/* ROAS Highlight */}
-        <div className="bg-emerald-50 border border-emerald-100 rounded-[2rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-emerald-50 border border-emerald-100 rounded-[2rem] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-black text-emerald-900 tracking-tighter mb-1">
               ROAS 100~200% <span className="text-emerald-400 mx-2">→</span> ROAS <span className="text-emerald-600">800%</span>
@@ -194,10 +194,10 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
               <span className="text-lg">💡</span>
               <h4 className="text-base font-black tracking-tight">기존 광고</h4>
             </div>
-            <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full" style={{ paddingBottom: '35px', height: '555.5px' }}>
-              <div className="space-y-6 px-8 text-center" style={{ marginTop: '30px' }}>
+            <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full min-h-[350px] sm:min-h-[456.625px] pb-[35px]">
+              <div className="space-y-6 px-6 sm:px-8 text-center" style={{ marginTop: '30px' }}>
                 <p className="text-sm font-bold text-black/80">제품 중심 구조의 콘텐츠</p>
-                <div className="aspect-square overflow-hidden rounded-2xl border border-black/5 shadow-sm">
+                <div className="aspect-video overflow-hidden rounded-2xl border border-black/5 shadow-sm">
                   <img 
                     src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/fef11f41ba077b49ae04a17cf228231aad7dd926/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png" 
                     alt="접근 방식" 
@@ -222,10 +222,10 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
               <span className="text-lg">✅</span>
               <h4 className="text-base font-black tracking-tight">해결 전략</h4>
             </div>
-            <div className="rounded-[2rem] h-full" style={{ backgroundColor: '#d5f5d1', paddingBottom: '35px', height: '555.5px' }}>
-              <div className="space-y-6 px-8 text-center" style={{ marginTop: '0px', paddingTop: '30px' }}>
+            <div className="rounded-[2rem] h-full bg-[#d5f5d1] pb-[35px] min-h-[350px] sm:min-h-[456.625px]">
+              <div className="space-y-6 px-6 sm:px-8 text-center" style={{ marginTop: '0px', paddingTop: '30px' }}>
                 <p className="text-sm font-bold" style={{ color: '#000000' }}>궁금증 유도형 메시지</p>
-                <div className="aspect-square overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+                <div className="aspect-video overflow-hidden rounded-2xl border border-white/10 shadow-lg">
                   <img 
                     src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/8f3be8aead60330a533bd5546c5b8100afa86a9b/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg" 
                     alt="해결 전략" 
@@ -276,7 +276,7 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-emerald-400 font-bold text-lg">
               이번 프로젝트를 통해 확인한 핵심은<br />
               성과를 결정하는 지점이 앞단에 있다는 점이었습니다.
@@ -376,7 +376,7 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
   return (
     <div className="grid lg:grid-cols-12 gap-8">
       <div className="lg:col-span-8 space-y-12">
-        <div className="bg-blue-50 border border-blue-100 rounded-[2rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-blue-50 border border-blue-100 rounded-[2rem] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-black text-blue-900 tracking-tighter mb-1">
               파일럿 예능 포맷을 별도로 설계 및 검증한 프로젝트
@@ -419,7 +419,7 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
                 <span className="text-lg">💡</span>
                 <h4 className="text-base font-black tracking-tight">기존 콘텐츠</h4>
               </div>
-              <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full p-8 space-y-6 text-center" style={{ height: '456.625px' }}>
+              <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full p-6 sm:p-8 space-y-6 text-center min-h-[350px] sm:min-h-[456.625px]">
                 <p className="text-sm font-bold text-black/80">정보 전달형 인터뷰</p>
                 <div className="aspect-video overflow-hidden rounded-2xl border border-black/5 shadow-sm">
                   <img 
@@ -443,7 +443,7 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
                 <span className="text-lg">✅</span>
                 <h4 className="text-base font-black tracking-tight">파일럿 프로그램</h4>
               </div>
-              <div className="rounded-[2rem] h-full p-8 space-y-6 bg-blue-100 text-center" style={{ height: '456.625px' }}>
+              <div className="rounded-[2rem] h-full p-6 sm:p-8 space-y-6 bg-blue-100 text-center min-h-[350px] sm:min-h-[456.625px]">
                 <p className="text-sm font-bold text-black">토론형 웹예능 포맷</p>
                 <div className="aspect-video overflow-hidden rounded-2xl border border-white/10 shadow-lg">
                   <img src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/1e5ba6b1f6af3d1a74e3525651e0f9c31a756f77/2026033331_102019.png" alt="파일럿 프로그램" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -490,7 +490,7 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
                 <p className="text-[13px] font-bold text-zinc-600"><span className="text-zinc-400 mr-2">MC:</span> 개그맨 MC 섭외로 콘텐츠 진입 장벽 완화 + 대중성 확보</p>
               </div>
             </div>
-            <div className="bg-white rounded-[2rem] p-10 border border-black/5 shadow-sm">
+            <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm">
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">주요 성과</h4>
               <div className="overflow-hidden rounded-xl border border-zinc-100">
                 <table className="w-full text-left border-collapse">
@@ -524,7 +524,7 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-blue-400 font-bold text-lg">
               이번 프로젝트를 통해 확인한 핵심은<br />
               콘텐츠의 차별화는 메시지가 아니라 기획 단계에서 결정된다는 점이었습니다.
@@ -656,7 +656,7 @@ const HoweverSpecialLayout = ({ project }: { project: Project }) => {
                 <span className="text-lg">💡</span>
                 <h4 className="text-base font-black tracking-tight">이미지 콘텐츠</h4>
               </div>
-              <div className="bg-zinc-50 rounded-[2rem] border border-black/5 p-8 space-y-6 text-center" style={{ height: '530.5px' }}>
+              <div className="bg-zinc-50 rounded-[2rem] border border-black/5 p-8 space-y-6 text-center min-h-[530.5px]">
                 <div className="aspect-square overflow-hidden rounded-2xl border border-black/5 shadow-sm bg-zinc-200 mx-auto">
                   <img src="https://github.com/wlgpwkdb-cell/LEEJH/blob/e12122c059734708846002dfa480a6f0a49a057e/ho0.png?raw=true" alt="이미지 콘텐츠" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
@@ -676,7 +676,7 @@ const HoweverSpecialLayout = ({ project }: { project: Project }) => {
                 <span className="text-lg">✅</span>
                 <h4 className="text-base font-black tracking-tight">릴스 콘텐츠</h4>
               </div>
-              <div className="rounded-[2rem] p-8 space-y-6 bg-pink-100 text-center" style={{ height: '530.5px' }}>
+              <div className="rounded-[2rem] p-8 space-y-6 bg-pink-100 text-center min-h-[530.5px]">
                 <div className="aspect-square overflow-hidden rounded-2xl border border-white/10 shadow-lg mx-auto">
                   <img src="https://github.com/wlgpwkdb-cell/LEEJH/blob/e12122c059734708846002dfa480a6f0a49a057e/ho1.png?raw=true" alt="릴스 콘텐츠" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
@@ -727,7 +727,7 @@ const HoweverSpecialLayout = ({ project }: { project: Project }) => {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-[2rem] p-10 border border-black/5 shadow-sm">
+            <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm">
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">주요 성과</h4>
               <div className="overflow-hidden rounded-xl border border-zinc-100">
                 <table className="w-full text-left border-collapse">
@@ -761,7 +761,7 @@ const HoweverSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-pink-400 font-bold text-lg">
               이번 프로젝트의 핵심은<br />
               브랜드 콘텐츠의 '이해'와 '발견'의 역할을 구분하여 전략적으로 설계하는 것이었습니다.
@@ -889,7 +889,7 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
                 <span className="text-lg">💡</span>
                 <h4 className="text-base font-black tracking-tight">기존 콘텐츠</h4>
               </div>
-              <div className="bg-zinc-50 rounded-[2rem] border border-black/5 p-8 space-y-6 flex flex-col items-center text-center" style={{ height: '461.25px' }}>
+              <div className="bg-zinc-50 rounded-[2rem] border border-black/5 p-8 space-y-6 flex flex-col items-center text-center" style={{ minHeight: '461.25px' }}>
                 <p className="text-sm font-bold text-black/80">정보 전달형 사내 방송</p>
                 <div className="aspect-video w-full overflow-hidden rounded-2xl border border-black/5 shadow-sm bg-zinc-200 flex items-center justify-center">
                   <img src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/5ce8a089d5f5e16d24374327747f6da37c948126/ch11.png" alt="기존 사내 방송" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -908,7 +908,7 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
                 <span className="text-lg">✅</span>
                 <h4 className="text-base font-black tracking-tight">체험 콘텐츠</h4>
               </div>
-              <div className="rounded-[2rem] p-8 space-y-6 bg-amber-100 flex flex-col items-center text-center" style={{ height: '461.25px' }}>
+              <div className="rounded-[2rem] p-8 space-y-6 bg-amber-100 flex flex-col items-center text-center min-h-[461.25px]">
                 <p className="text-sm font-bold text-black">체험형 리얼 예능 포맷</p>
                 <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg">
                   <img src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/5ce8a089d5f5e16d24374327747f6da37c948126/ch1.png" alt="해결 전략" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -965,7 +965,7 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-[2rem] p-10 border border-black/5 shadow-sm">
+            <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm">
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">주요 성과</h4>
               <div className="overflow-hidden rounded-xl border border-zinc-100">
                 <table className="w-full text-left border-collapse">
@@ -1000,7 +1000,7 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-amber-400 font-bold text-lg">
               이번 프로젝트를 통해 확인한 핵심은<br />
               사내 콘텐츠는 전달되고 있었지만, 연결되고 있지 않았다는 점입니다.
@@ -1098,16 +1098,16 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] flex justify-center p-4 sm:p-8 bg-black/90 backdrop-blur-xl overflow-y-auto"
-      onClick={onClose}
+      className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl overflow-y-auto"
     >
-      <motion.div 
-        initial={{ scale: 0.95, y: 20, opacity: 0 }}
-        animate={{ scale: 1, y: 0, opacity: 1 }}
-        exit={{ scale: 0.95, y: 20, opacity: 0 }}
-        className="bg-white rounded-[3rem] w-full max-w-7xl h-fit shadow-2xl flex flex-col my-auto"
-        onClick={e => e.stopPropagation()}
-      >
+      <div className="min-h-full flex justify-center p-4 sm:p-8" onClick={onClose}>
+        <motion.div 
+          initial={{ scale: 0.95, y: 20, opacity: 0 }}
+          animate={{ scale: 1, y: 0, opacity: 1 }}
+          exit={{ scale: 0.95, y: 20, opacity: 0 }}
+          className="bg-white rounded-[2rem] sm:rounded-[3rem] w-full max-w-7xl h-fit shadow-2xl flex flex-col my-auto"
+          onClick={e => e.stopPropagation()}
+        >
         {/* Header Section - Top Image for 16:9 Video feel */}
         <div className="flex flex-col border-b border-black/5 shrink-0">
           <div className={`w-full bg-zinc-100 relative overflow-hidden ${project.aspectRatio || 'aspect-video'}`}>
@@ -1386,7 +1386,8 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
             </div>
           )}
         </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
