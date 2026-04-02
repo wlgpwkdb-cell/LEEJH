@@ -145,12 +145,12 @@ const DietdayChart = () => {
 
 const DietdaySpecialLayout = ({ project }: { project: Project }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
       {/* Left Column */}
-      <div className="md:col-span-1 lg:col-span-8 space-y-12">
+      <div className="lg:col-span-8 space-y-12">
         {/* ROAS Highlight */}
-        <div className="bg-emerald-50 border border-emerald-100 rounded-[2rem] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
+        <div className="bg-emerald-50 border border-emerald-100 rounded-[2rem] p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="text-center lg:text-left">
             <h3 className="text-xl sm:text-2xl font-black text-emerald-900 tracking-tighter mb-1">
               ROAS 100~200% <span className="text-emerald-400 mx-1 sm:mx-2">→</span> ROAS <span className="text-emerald-600">800%</span>
             </h3>
@@ -188,7 +188,7 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">💡</span>
             <h3 className="text-xl font-black tracking-tight">APPROACH</h3>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-lg">💡</span>
@@ -276,7 +276,7 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-8 lg:p-10 rounded-[2.5rem] text-[14px] sm:text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-emerald-400 font-bold text-lg">
               이번 프로젝트를 통해 확인한 핵심은<br />
               성과를 결정하는 지점이 앞단에 있다는 점이었습니다.
@@ -320,7 +320,7 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
       </div>
 
       {/* Right Column (Sidebar) */}
-      <div className="md:col-span-1 lg:col-span-4 space-y-6">
+      <div className="lg:col-span-4 space-y-6">
         {/* Role Card */}
         <div className="bg-white border border-zinc-100 rounded-[2rem] p-8 shadow-sm">
           <div className="flex items-center gap-3 mb-6">
@@ -376,8 +376,8 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
   return (
     <div className="grid lg:grid-cols-12 gap-8">
       <div className="lg:col-span-8 space-y-12">
-        <div className="bg-blue-50 border border-blue-100 rounded-[2rem] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
+        <div className="bg-blue-50 border border-blue-100 rounded-[2rem] p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="text-center lg:text-left">
             <h3 className="text-2xl font-black text-blue-900 tracking-tighter mb-1">
               파일럿 예능 포맷을 별도로 설계 및 검증한 프로젝트
             </h3>
@@ -413,7 +413,7 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">💡</span>
             <h3 className="text-xl font-black tracking-tight">APPROACH</h3>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="space-y-6">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-lg">💡</span>
@@ -524,7 +524,7 @@ const DukbunSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-8 lg:p-10 rounded-[2.5rem] text-[14px] sm:text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-blue-400 font-bold text-lg">
               이번 프로젝트를 통해 확인한 핵심은<br />
               콘텐츠의 차별화는 메시지가 아니라 기획 단계에서 결정된다는 점이었습니다.
@@ -607,8 +607,8 @@ const HoweverSpecialLayout = ({ project }: { project: Project }) => {
   return (
     <div className="grid lg:grid-cols-12 gap-8">
       <div className="lg:col-span-8 space-y-12">
-        <div className="bg-pink-50 border border-pink-100 rounded-[2rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
+        <div className="bg-pink-50 border border-pink-100 rounded-[2rem] p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="text-center lg:text-left">
             <h3 className="text-2xl font-black text-pink-900 tracking-tighter mb-1">
               브랜드 론칭 1개월 만에 팔로워 <span className="text-pink-600">1만 확보</span>
             </h3>
@@ -650,7 +650,7 @@ const HoweverSpecialLayout = ({ project }: { project: Project }) => {
               동일한 비주얼 자산을 기준으로 두 가지 방식 비교
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="space-y-6">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-lg">💡</span>
@@ -761,7 +761,7 @@ const HoweverSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-8 lg:p-10 rounded-[2.5rem] text-[14px] sm:text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-pink-400 font-bold text-lg">
               이번 프로젝트의 핵심은<br />
               브랜드 콘텐츠의 '이해'와 '발견'의 역할을 구분하여 전략적으로 설계하는 것이었습니다.
@@ -846,8 +846,8 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
   return (
     <div className="grid lg:grid-cols-12 gap-8">
       <div className="lg:col-span-8 space-y-12">
-        <div className="bg-amber-50 border border-amber-100 rounded-[2rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
+        <div className="bg-amber-50 border border-amber-100 rounded-[2rem] p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="text-center lg:text-left">
             <h3 className="text-2xl font-black text-amber-900 tracking-tighter mb-1">
               정보를 전달하지 않고, 경험하게 만든다
             </h3>
@@ -883,7 +883,7 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">💡</span>
             <h3 className="text-xl font-black tracking-tight">APPROACH</h3>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="space-y-6">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-lg">💡</span>
@@ -1000,7 +1000,7 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
             <span className="text-2xl">🍃</span>
             <h3 className="text-xl font-black tracking-tight uppercase">INSIGHT</h3>
           </div>
-          <div className="bg-zinc-900 text-white/90 p-6 sm:p-10 rounded-[2.5rem] text-[15px] leading-[1.8] font-medium space-y-8">
+          <div className="bg-zinc-900 text-white/90 p-6 sm:p-8 lg:p-10 rounded-[2.5rem] text-[14px] sm:text-[15px] leading-[1.8] font-medium space-y-8">
             <p className="text-amber-400 font-bold text-lg">
               이번 프로젝트를 통해 확인한 핵심은<br />
               사내 콘텐츠는 전달되고 있었지만, 연결되고 있지 않았다는 점입니다.
