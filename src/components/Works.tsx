@@ -82,32 +82,32 @@ const DietdayChart = () => {
   ];
 
   return (
-    <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm mt-6 overflow-x-auto">
-      <div className="min-w-[700px] relative flex items-end justify-between px-8 pb-12 border-b border-[#545e6b]/30 min-h-[250px] sm:min-h-[302px]">
+    <div className="bg-white rounded-[2rem] p-4 sm:p-10 border border-black/5 shadow-sm mt-6 overflow-hidden">
+      <div className="w-full relative flex items-end justify-between px-2 sm:px-8 pb-12 border-b border-[#545e6b]/30 min-h-[200px] sm:min-h-[302px]">
         {metrics.map((m, idx) => (
-          <div key={m.label} className="flex flex-col items-center flex-1 relative">
+          <div key={m.label} className="flex flex-col items-center flex-1 relative px-1">
             {/* Badge */}
             {m.badge && (
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="absolute -top-12 z-10"
+                className="absolute -top-14 sm:-top-12 z-10"
               >
-                <div className="bg-[#48bb78] text-white text-[11px] font-bold px-4 py-1.5 rounded-lg whitespace-nowrap shadow-sm">
+                <div className="bg-[#48bb78] text-white text-[9px] sm:text-[11px] font-bold px-2 sm:px-4 py-1 sm:py-1.5 rounded-lg whitespace-nowrap shadow-sm">
                   {m.badge}
                 </div>
               </motion.div>
             )}
 
             {/* Bars Container */}
-            <div className="flex items-end gap-2 mb-2 h-48 relative">
+            <div className="flex items-end gap-1 sm:gap-2 mb-2 h-32 sm:h-48 relative">
               {/* Bar A */}
               <div className="flex flex-col items-center h-full justify-end">
                 <motion.div 
                   initial={{ height: 0 }}
                   whileInView={{ height: `${m.heightA}%` }}
-                  className="w-10 sm:w-12 bg-[#545e6b] rounded-t-sm"
+                  className="w-4 sm:w-8 md:w-10 bg-[#545e6b] rounded-t-sm"
                 />
               </div>
               {/* Bar B */}
@@ -115,28 +115,28 @@ const DietdayChart = () => {
                 <motion.div 
                   initial={{ height: 0 }}
                   whileInView={{ height: `${m.heightB}%` }}
-                  className="w-10 sm:w-12 bg-[#48bb78] rounded-t-sm"
+                  className="w-4 sm:w-8 md:w-10 bg-[#48bb78] rounded-t-sm"
                 />
               </div>
             </div>
 
             {/* Label */}
-            <div className="absolute -bottom-10 whitespace-nowrap">
-              <span className="text-[13px] font-bold text-[#545e6b]">{m.label}</span>
+            <div className="absolute -bottom-10 text-center w-full">
+              <span className="text-[10px] sm:text-[13px] font-bold text-[#545e6b] block leading-tight">{m.label}</span>
             </div>
           </div>
         ))}
       </div>
       
       {/* Legend */}
-      <div className="flex justify-center gap-8 pt-0 mt-[34px] min-h-[17.5px]">
-        <div className="flex items-center gap-2.5">
-          <div className="w-4 h-4 bg-[#545e6b] rounded-sm" />
-          <span className="text-[11px] font-bold text-[#545e6b]/60 uppercase tracking-widest">A (기존)</span>
+      <div className="flex justify-center gap-4 sm:gap-8 pt-0 mt-[34px] min-h-[17.5px]">
+        <div className="flex items-center gap-1.5 sm:gap-2.5">
+          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-[#545e6b] rounded-sm" />
+          <span className="text-[9px] sm:text-[11px] font-bold text-[#545e6b]/60 uppercase tracking-widest">A (기존)</span>
         </div>
-        <div className="flex items-center gap-2.5">
-          <div className="w-4 h-4 bg-[#48bb78] rounded-sm" />
-          <span className="text-[11px] font-bold text-[#48bb78]/60 uppercase tracking-widest">B (개선)</span>
+        <div className="flex items-center gap-1.5 sm:gap-2.5">
+          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-[#48bb78] rounded-sm" />
+          <span className="text-[9px] sm:text-[11px] font-bold text-[#48bb78]/60 uppercase tracking-widest">B (개선)</span>
         </div>
       </div>
     </div>
@@ -145,16 +145,16 @@ const DietdayChart = () => {
 
 const DietdaySpecialLayout = ({ project }: { project: Project }) => {
   return (
-    <div className="grid lg:grid-cols-12 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
       {/* Left Column */}
-      <div className="lg:col-span-8 space-y-12">
+      <div className="md:col-span-1 lg:col-span-8 space-y-12">
         {/* ROAS Highlight */}
         <div className="bg-emerald-50 border border-emerald-100 rounded-[2rem] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-black text-emerald-900 tracking-tighter mb-1">
-              ROAS 100~200% <span className="text-emerald-400 mx-2">→</span> ROAS <span className="text-emerald-600">800%</span>
+            <h3 className="text-xl sm:text-2xl font-black text-emerald-900 tracking-tighter mb-1">
+              ROAS 100~200% <span className="text-emerald-400 mx-1 sm:mx-2">→</span> ROAS <span className="text-emerald-600">800%</span>
             </h3>
-            <p className="text-sm text-emerald-700/60 font-medium italic">광고 효율이 아니라 시청 구조를 바꿨습니다</p>
+            <p className="text-xs sm:text-sm text-emerald-700/60 font-medium italic">광고 효율이 아니라 시청 구조를 바꿨습니다</p>
           </div>
         </div>
 
@@ -195,22 +195,22 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
               <h4 className="text-base font-black tracking-tight">기존 광고</h4>
             </div>
             <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full pb-[35px]">
-              <div className="space-y-6 px-6 sm:px-8 text-center" style={{ marginTop: '30px' }}>
-                <p className="text-sm font-bold text-black/80">제품 중심 구조의 콘텐츠</p>
-                <div className="overflow-hidden rounded-2xl border border-black/5 shadow-sm">
+              <div className="space-y-6 px-4 sm:px-8 text-center" style={{ marginTop: '30px' }}>
+                <p className="text-xs sm:text-sm font-bold text-black/80">제품 중심 구조의 콘텐츠</p>
+                <div className="overflow-hidden rounded-2xl border border-black/5 shadow-sm bg-white">
                   <img 
                     src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/fef11f41ba077b49ae04a17cf228231aad7dd926/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png" 
                     alt="접근 방식" 
-                    className="w-full h-auto" 
+                    className="w-full h-auto block" 
                     referrerPolicy="no-referrer" 
                   />
                 </div>
                 <div className="space-y-3">
-                  <p className="font-medium text-black/60 whitespace-pre-line" style={{ lineHeight: '28.75px', fontSize: '15px' }}>
+                  <p className="font-medium text-black/60 whitespace-pre-line text-sm sm:text-[15px] leading-relaxed">
                     제품의 장점과 스펙을 중심으로{"\n"}
                     빠르게 정보를 전달하는 방식
                   </p>
-                  <p className="font-bold text-black/80" style={{ lineHeight: '28px', fontSize: '14px' }}>
+                  <p className="font-bold text-black/80 text-xs sm:text-[14px] leading-normal">
                     👉 제품을 이해시키면 구매로 이어질 것이라는 전제
                   </p>
                 </div>
@@ -223,18 +223,18 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
               <h4 className="text-base font-black tracking-tight">해결 전략</h4>
             </div>
             <div className="rounded-[2rem] h-full bg-[#d5f5d1] pb-[35px]">
-              <div className="space-y-6 px-6 sm:px-8 text-center" style={{ marginTop: '0px', paddingTop: '30px' }}>
-                <p className="text-sm font-bold" style={{ color: '#000000' }}>궁금증 유도형 메시지</p>
-                <div className="overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+              <div className="space-y-6 px-4 sm:px-8 text-center" style={{ marginTop: '0px', paddingTop: '30px' }}>
+                <p className="text-xs sm:text-sm font-bold" style={{ color: '#000000' }}>궁금증 유도형 메시지</p>
+                <div className="overflow-hidden rounded-2xl border border-white/10 shadow-lg bg-white">
                   <img 
                     src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/8f3be8aead60330a533bd5546c5b8100afa86a9b/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg" 
                     alt="해결 전략" 
-                    className="w-full h-auto" 
+                    className="w-full h-auto block" 
                     referrerPolicy="no-referrer" 
                   />
                 </div>
                 <div className="space-y-3">
-                  <p className="whitespace-pre-line" style={{ fontSize: '19px', fontWeight: 'bold', lineHeight: '28.75px', color: '#000000', paddingTop: '16px' }}>
+                  <p className="whitespace-pre-line font-bold text-[#000000] text-base sm:text-[19px] leading-relaxed pt-4">
                     질문형 Hook으로 시작해서{"\n"}
                     생각을 먼저 유도하는 방식
                   </p>
@@ -320,7 +320,7 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
       </div>
 
       {/* Right Column (Sidebar) */}
-      <div className="lg:col-span-4 space-y-6">
+      <div className="md:col-span-1 lg:col-span-4 space-y-6">
         {/* Role Card */}
         <div className="bg-white border border-zinc-100 rounded-[2rem] p-8 shadow-sm">
           <div className="flex items-center gap-3 mb-6">
@@ -1114,7 +1114,7 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
             <img 
               src={project.image || `https://picsum.photos/seed/${project.title}/800/800`} 
               alt={project.title}
-              className={`w-full h-full ${project.aspectRatio ? 'object-contain' : 'object-cover'}`}
+              className={`w-full h-full ${project.title.includes('디에트데이') ? 'object-contain' : (project.aspectRatio ? 'object-contain' : 'object-cover')}`}
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-black/10" />
