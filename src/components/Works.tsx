@@ -82,7 +82,7 @@ const DietdayChart = () => {
   ];
 
   return (
-    <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm mt-6 overflow-x-auto min-h-[350px] sm:min-h-[437.5px]">
+    <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-black/5 shadow-sm mt-6 overflow-x-auto">
       <div className="min-w-[700px] relative flex items-end justify-between px-8 pb-12 border-b border-[#545e6b]/30 min-h-[250px] sm:min-h-[302px]">
         {metrics.map((m, idx) => (
           <div key={m.label} className="flex flex-col items-center flex-1 relative">
@@ -194,14 +194,14 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
               <span className="text-lg">💡</span>
               <h4 className="text-base font-black tracking-tight">기존 광고</h4>
             </div>
-            <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full min-h-[350px] sm:min-h-[456.625px] pb-[35px]">
+            <div className="bg-zinc-50 rounded-[2rem] border border-black/5 h-full pb-[35px]">
               <div className="space-y-6 px-6 sm:px-8 text-center" style={{ marginTop: '30px' }}>
                 <p className="text-sm font-bold text-black/80">제품 중심 구조의 콘텐츠</p>
-                <div className="aspect-video overflow-hidden rounded-2xl border border-black/5 shadow-sm">
+                <div className="overflow-hidden rounded-2xl border border-black/5 shadow-sm">
                   <img 
                     src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/fef11f41ba077b49ae04a17cf228231aad7dd926/230809_%EC%89%90%EC%9D%B4%ED%81%AC2.png" 
                     alt="접근 방식" 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-auto" 
                     referrerPolicy="no-referrer" 
                   />
                 </div>
@@ -222,14 +222,14 @@ const DietdaySpecialLayout = ({ project }: { project: Project }) => {
               <span className="text-lg">✅</span>
               <h4 className="text-base font-black tracking-tight">해결 전략</h4>
             </div>
-            <div className="rounded-[2rem] h-full bg-[#d5f5d1] pb-[35px] min-h-[350px] sm:min-h-[456.625px]">
+            <div className="rounded-[2rem] h-full bg-[#d5f5d1] pb-[35px]">
               <div className="space-y-6 px-6 sm:px-8 text-center" style={{ marginTop: '0px', paddingTop: '30px' }}>
                 <p className="text-sm font-bold" style={{ color: '#000000' }}>궁금증 유도형 메시지</p>
-                <div className="aspect-video overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+                <div className="overflow-hidden rounded-2xl border border-white/10 shadow-lg">
                   <img 
                     src="https://raw.githubusercontent.com/wlgpwkdb-cell/LEEJH/8f3be8aead60330a533bd5546c5b8100afa86a9b/221214_%EB%B0%95%EC%A7%80%EC%9D%80_%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A4_1.jpg" 
                     alt="해결 전략" 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-auto" 
                     referrerPolicy="no-referrer" 
                   />
                 </div>
