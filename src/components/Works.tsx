@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Markdown from 'react-markdown';
 import remarkBreaks from 'remark-breaks';
 import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES, IMPACT_STATS } from '../constants';
-import { ExternalLink, Play, Youtube, Instagram, X, ArrowUpRight, Printer } from 'lucide-react';
+import { ExternalLink, Play, Youtube, Instagram, X, ArrowUpRight } from 'lucide-react';
 import { Project } from '../types';
 
 const RoleGraph = ({ breakdown, title }: { breakdown: any, title?: string }) => {
@@ -1088,10 +1088,8 @@ const NHSpecialLayout = ({ project }: { project: Project }) => {
 export const ProjectModal = ({ project, onClose }: { project: Project, onClose: () => void }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    document.body.classList.add('modal-open');
     return () => {
       document.body.style.overflow = 'unset';
-      document.body.classList.remove('modal-open');
     };
   }, []);
 
@@ -1120,23 +1118,12 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-black/10" />
-            <div className="absolute top-6 right-6 flex items-center gap-3 z-10 print:hidden">
-              <button 
-                onClick={() => window.print()}
-                className="h-10 px-4 rounded-full bg-white/20 backdrop-blur-md flex items-center gap-2 text-white hover:bg-white hover:text-black transition-all border border-white/30 font-bold text-xs shadow-md cursor-pointer hover:scale-[1.03] active:scale-[0.97]"
-                title="PDF 저장 / 인쇄"
-              >
-                <Printer size={16} />
-                <span className="hidden sm:inline">PDF 저장</span>
-              </button>
-              <button 
-                onClick={onClose}
-                className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all border border-white/30 cursor-pointer shadow-md hover:scale-[1.03] active:scale-[0.97]"
-                title="닫기"
-              >
-                <X size={20} />
-              </button>
-            </div>
+            <button 
+              onClick={onClose}
+              className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all z-10 border border-white/30"
+            >
+              <X size={20} />
+            </button>
           </div>
           <div className="p-6 sm:p-8 relative">
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-600 mb-3 block">{project.category}</span>
