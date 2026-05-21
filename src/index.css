@@ -143,3 +143,83 @@ html {
 body {
   @apply bg-[#f5f5f4];
 }
+
+/* Print Styles & PDF Export Optimization */
+@media print {
+  html, body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000055; /* Enforce high-contrast dark text */
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important; /* Force standard A4 width */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Prevent page truncation or content clipping */
+  .page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+    clear: both !important;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .print-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-bottom: 2rem !important;
+    background: #ffffff !important;
+    border: 1px solid #e4e4e7 !important;
+  }
+
+  /* Remove all transitions, animations, and heavy visual effects */
+  * {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Make sure link destinations are clearly selectable and clickable */
+  a {
+    color: #065f46 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Enforce standard print-safe spacing and grid configurations */
+  .grid {
+    display: grid !important;
+  }
+
+  /* Flex modifications for print to prevent layout shifts */
+  .flex {
+    display: flex !important;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}

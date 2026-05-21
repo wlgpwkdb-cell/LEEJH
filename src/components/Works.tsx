@@ -1415,43 +1415,52 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClick }) => {
+  const primaryUrl = project.links && project.links.length > 0 ? project.links[0].url : '#';
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
-      viewport={{ once: true }}
-      onClick={onClick}
-      className="group cursor-pointer bg-white rounded-[2rem] overflow-hidden border border-black/5 shadow-sm hover:shadow-2xl transition-all duration-500"
+    <a 
+      href={primaryUrl}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick();
+      }}
+      className="block text-inherit no-underline"
     >
-      <div className={`${project.aspectRatio || 'aspect-video'} bg-zinc-100 relative overflow-hidden`}>
-        <img 
-          src={project.image || `https://picsum.photos/seed/${project.title}/800/450`} 
-          alt={project.title}
-          className={`w-full h-full ${project.aspectRatio ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-700`}
-        />
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30">
-            <Play fill="white" size={24} />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.05 }}
+        viewport={{ once: true }}
+        className="group cursor-pointer bg-white rounded-[2rem] overflow-hidden border border-black/5 shadow-sm hover:shadow-2xl transition-all duration-500"
+      >
+        <div className={`${project.aspectRatio || 'aspect-video'} bg-zinc-100 relative overflow-hidden`}>
+          <img 
+            src={project.image || `https://picsum.photos/seed/${project.title}/800/450`} 
+            alt={project.title}
+            className={`w-full h-full ${project.aspectRatio ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-700`}
+          />
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30">
+              <Play fill="white" size={24} />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="p-8">
-        <div className="flex justify-between items-start mb-4">
-          <div>
-            <h4 className="text-xl font-bold tracking-tight mb-1 group-hover:text-emerald-600 transition-colors">{project.title}</h4>
-            <p className="text-[10px] font-bold text-black/40 uppercase tracking-widest">{project.description}</p>
+        <div className="p-8">
+          <div className="flex justify-between items-start mb-4">
+            <div>
+              <h4 className="text-xl font-bold tracking-tight mb-1 group-hover:text-emerald-600 transition-colors">{project.title}</h4>
+              <p className="text-[10px] font-bold text-black/40 uppercase tracking-widest">{project.description}</p>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags?.map((tag, i) => (
+              <span key={i} className="px-2.5 py-1 rounded-lg bg-zinc-100 text-[10px] font-bold text-black/60">
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
-        <div className="flex flex-wrap gap-1.5">
-          {project.tags?.map((tag, i) => (
-            <span key={i} className="px-2.5 py-1 rounded-lg bg-zinc-100 text-[10px] font-bold text-black/60">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </a>
   );
 };
 
