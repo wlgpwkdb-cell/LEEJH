@@ -1,5 +1,5 @@
 import React from 'react';
-import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES, HERO_CONTENT, ABOUT_CONTENT, CORE_EXPERTISE, PRODUCTION_PROCESS } from '../constants';
+import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES, HERO_CONTENT, ABOUT_CONTENT, CORE_EXPERTISE } from '../constants';
 import { Project } from '../types';
 
 export default function PrintPortfolio() {
@@ -55,22 +55,6 @@ export default function PrintPortfolio() {
         </div>
       </section>
 
-      {/* Workflow Process */}
-      <section className="mb-10 avoid-break">
-        <h2 className="text-lg font-extrabold border-b border-zinc-200 pb-2 mb-4 uppercase tracking-wider text-emerald-800">
-          Production Process
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {PRODUCTION_PROCESS.map((item, i) => (
-            <div key={i} className="p-3 bg-zinc-50 border border-zinc-100 rounded-xl">
-              <span className="block font-mono text-xs text-zinc-400 font-extrabold mb-1">{item.step}</span>
-              <h5 className="text-[12px] font-extrabold text-zinc-900 mb-1">{item.title}</h5>
-              <p className="text-[10px] text-zinc-600 leading-snug">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Page break before works section inside PDF */}
       <div className="page-break my-8" />
 
@@ -95,7 +79,7 @@ export default function PrintPortfolio() {
 
               <div className="space-y-10">
                 {projects.map((project) => (
-                  <article key={project.title} className="bg-zinc-50 border border-zinc-200 rounded-3xl p-6 md:p-8 space-y-6 avoid-break print-card shadow-sm">
+                  <article key={project.title} className="bg-zinc-50 border border-zinc-200 rounded-3xl p-6 md:p-8 space-y-6 print-project-card shadow-sm">
                     {/* Project Title Block */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 border-b border-zinc-200 pb-4">
                       <div>

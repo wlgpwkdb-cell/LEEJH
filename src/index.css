@@ -184,9 +184,11 @@ body {
     break-inside: avoid !important;
   }
 
-  .print-card {
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
+  .print-project-card {
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
     margin-bottom: 2rem !important;
     background: #ffffff !important;
     border: 1px solid #e4e4e7 !important;
