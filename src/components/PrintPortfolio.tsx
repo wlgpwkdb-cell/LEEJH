@@ -15,7 +15,7 @@ export default function PrintPortfolio() {
         <div className="text-[12px] text-zinc-700 space-y-1 font-mono md:text-right">
           <p>📞 <strong>Phone:</strong> 010-3880-9330</p>
           <p>✉️ <strong>Email:</strong> wlgpwkdb@hanmail.net</p>
-          <p>🌐 <strong>Portfolio:</strong> <a href="https://wlgpwkdb-cell.github.io/LEEJH/" className="underline cursor-pointer text-emerald-800 hover:text-emerald-600">https://wlgpwkdb-cell.github.io/LEEJH/</a></p>
+          <p>🌐 <strong>Portfolio:</strong> <a href="https://leejh.vercel.app" className="underline cursor-pointer text-emerald-800 hover:text-emerald-600">https://leejh.vercel.app</a></p>
         </div>
       </header>
 
@@ -72,14 +72,19 @@ export default function PrintPortfolio() {
           if (projects.length === 0) return null;
 
           return (
-            <div key={category} className="space-y-8">
-              <div className="border-l-4 border-emerald-600 pl-4 py-1">
+            <div key={category} className="space-y-8 print-category-section">
+              <div className="border-l-4 border-emerald-600 pl-4 py-1 print-category-header">
                 <h3 className="text-xl font-extrabold text-zinc-900 uppercase tracking-tight">{category}</h3>
               </div>
 
               <div className="space-y-10">
-                {projects.map((project) => (
-                  <article key={project.title} className="bg-zinc-50 border border-zinc-200 rounded-3xl p-6 md:p-8 space-y-6 print-project-card shadow-sm">
+                {projects.map((project, idx) => (
+                  <article 
+                    key={project.title} 
+                    className={`bg-zinc-50 border border-zinc-200 rounded-3xl p-6 md:p-8 space-y-6 shadow-sm print-project-card ${
+                      idx === 0 ? 'print-project-card-first' : 'print-project-card-subsequent'
+                    }`}
+                  >
                     {/* Project Title Block */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 border-b border-zinc-200 pb-4">
                       <div>
@@ -97,11 +102,11 @@ export default function PrintPortfolio() {
 
                     {/* Image Placeholder or Actual Image */}
                     {project.image && (
-                      <div className="w-full max-h-56 overflow-hidden rounded-xl bg-zinc-150 border border-zinc-200 flex justify-center items-center">
+                      <div className="w-full max-h-56 overflow-hidden rounded-xl bg-zinc-150 border border-zinc-200 flex justify-center items-center print-image-container">
                         <img 
                           src={project.image} 
                           alt={project.title} 
-                          className="object-cover w-full h-auto max-h-56" 
+                          className="object-cover w-full h-auto max-h-56 print-image" 
                           referrerPolicy="no-referrer"
                         />
                       </div>

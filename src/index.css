@@ -149,9 +149,9 @@ body {
   html, body {
     background-color: #ffffff !important;
     background: #ffffff !important;
-    color: #000055; /* Enforce high-contrast dark text */
-    font-size: 11pt !important;
-    line-height: 1.5 !important;
+    color: #111111 !important; /* Enforce high-contrast dark gray/black text */
+    font-size: 10.5pt !important;
+    line-height: 1.4 !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 210mm !important; /* Force standard A4 width */
@@ -161,7 +161,7 @@ body {
 
   @page {
     size: A4 portrait;
-    margin: 15mm 15mm;
+    margin: 12mm 12mm;
   }
 
   .no-print {
@@ -184,14 +184,62 @@ body {
     break-inside: avoid !important;
   }
 
-  .print-project-card {
+  .print-category-section {
     page-break-before: always !important;
     break-before: page !important;
-    page-break-inside: auto !important;
-    break-inside: auto !important;
-    margin-bottom: 2rem !important;
+    clear: both !important;
+  }
+
+  .print-category-header {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .print-project-card {
     background: #ffffff !important;
     border: 1px solid #e4e4e7 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .print-project-card-first {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 1.25rem !important;
+  }
+
+  .print-project-card-subsequent {
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 1.25rem !important;
+  }
+
+  /* Force images to be very compact on print so that everything fits on one single page */
+  .print-image-container {
+    max-height: 130px !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .print-image {
+    max-height: 130px !important;
+    object-fit: cover !important;
+  }
+
+  /* Ensure content spacing is tight for A4 page alignment */
+  .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.75rem !important;
+  }
+
+  .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.5rem !important;
+  }
+
+  .gap-6 {
+    gap: 1rem !important;
   }
 
   /* Remove all transitions, animations, and heavy visual effects */
