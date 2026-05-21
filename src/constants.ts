@@ -262,6 +262,23 @@ export const PORTFOLIO_PROJECTS: Project[] = [
 
   // Brand Content
   {
+    title: "SK telecom",
+    category: "Brand Content",
+    role: "- 편집 100%",
+    roleBreakdown: { planning: 0, filming: 0, editing: 100 },
+    description: "가이드형 숏폼 콘텐츠",
+    challenge: "통신 서비스는 일상과 밀접하게 사용되지만\n서비스 구조와 기능은 사용자에 따라 어렵거나 낯설게 느껴질 수 있었습니다.\n\n특히 SK텔레콤의 다양한 기술·서비스는\n누구나 쉽고 직관적으로 이해할 수 있도록 전달하는 방식이 중요했습니다.",
+    approach: "강아지 캐릭터 ‘숏티’를 중심으로\n서비스 정보를 쉽고 친근하게 전달하는 가이드형 숏폼 콘텐츠 제작\n\n- AI 기반 제작 프로세스와 모션 그래픽을 활용하여 정보를 스토리텔링 구조로 재구성\n- 숏폼 환경에 맞춘 템포와 정보 구성을 통해 짧은 러닝타임 안에서도 서비스 이해가 가능하도록 설계",
+    impact: [
+      "캐릭터 IP 기반 콘텐츠 확장 가능성과 AI 활용 제작 방식의 실무 적용 가능성 검증",
+      "AI와 모션 기반 제작 방식을 통해 시리즈형 콘텐츠 운영 효율성 확보",
+      "숏폼 환경에 최적화된 정보 콘텐츠 포맷 구축"
+    ],
+    image: "https://img.youtube.com/vi/3BZr1SNe9gs/hqdefault.jpg",
+    links: [{ name: "요금안내서, 다섯 가지만 기억하세요", url: "https://youtu.be/3BZr1SNe9gs?si=FamAWjIg0k7ApLIk" }],
+    tags: ["숏폼", "IP 콘텐츠", "AI 퍼스트"]
+  },
+  {
     title: "커머스/F&B 홍보 영상",
     category: "Brand Content",
     role: "기획 50% / 제작 100%",

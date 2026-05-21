@@ -12,7 +12,7 @@ const RoleGraph = ({ breakdown, title }: { breakdown: any, title?: string }) => 
     { label: '기획', value: breakdown.planning, color: 'bg-emerald-500' },
     { label: (title === '덕분TV' || title === '퇴근하GO' || title === '대명 아임레디') ? '연출' : '촬영', value: breakdown.filming, color: 'bg-blue-500' },
     { label: '편집', value: breakdown.editing, color: 'bg-purple-500' },
-  ].filter(item => !((title === '대명 아임레디' || title === '덕분TV') && item.label === '편집'));
+  ].filter(item => item.value > 0);
 
   return (
     <div className="space-y-6">
@@ -1198,10 +1198,12 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
                         <div className="w-4 h-[1px] bg-black/20" /> Approach
                       </h3>
                       <div className="space-y-6">
-                        {project.title === '퇴근하GO' || project.title === '다은이가 알려줄게' || project.title === '수키원장' || project.title === 'NEWSEN 앳스타일 (STAR 1)' || project.title === '커머스/F&B 홍보 영상' || project.title === '서정대학교' || project.title === '대명 아임레디' || project.title === '채널A' || project.title === 'NAVER LIVE' || project.title === 'KBS 2TV <아침>' ? (
+                        {project.title === 'SK telecom' || project.title === '퇴근하GO' || project.title === '다은이가 알려줄게' || project.title === '수키원장' || project.title === 'NEWSEN 앳스타일 (STAR 1)' || project.title === '커머스/F&B 홍보 영상' || project.title === '서정대학교' || project.title === '대명 아임레디' || project.title === '채널A' || project.title === 'NAVER LIVE' || project.title === 'KBS 2TV <아침>' ? (
                           <div className="space-y-6">
                             <div className="text-lg text-black/80 leading-relaxed font-medium">
-                              {project.title === '퇴근하GO' 
+                              {project.title === 'SK telecom'
+                                ? '강아지 캐릭터 ‘숏티’를 중심으로 서비스 정보를 쉽고 친근하게 전달하는 가이드형 숏폼 콘텐츠 제작'
+                                : project.title === '퇴근하GO' 
                                 ? '체험형 예능 포맷을 활용해 사내 콘텐츠를 참여 행동을 유도하는 구조로 설계'
                                 : project.title === '다은이가 알려줄게'
                                 ? '정보 전달에 최적화된 포맷으로 사내 콘텐츠를 이해 중심 구조로 재설계'
@@ -1222,7 +1224,12 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
                                 : '데일리 제작 환경에 맞춰 자료 조사부터 촬영, 편집까지 전 제작 과정을 빠르고 정확하게 수행'}
                             </div>
                             <div className="bg-zinc-50/50 border border-zinc-100 p-8 rounded-[2rem] space-y-4">
-                              {(project.title === '퇴근하GO' 
+                              {(project.title === 'SK telecom'
+                                ? [
+                                    'AI 기반 제작 프로세스와 모션 그래픽을 활용하여 정보를 스토리텔링 구조로 재구성',
+                                    '숏폼 환경에 맞춘 템포와 정보 구성을 통해 짧은 러닝타임 안에서도 서비스 이해가 가능하도록 설계'
+                                  ]
+                                : project.title === '퇴근하GO' 
                                 ? [
                                     '동호회를 단순 소개하는 것이 아니라 “직접 참여해보고 싶은 콘텐츠”로 재구성',
                                     '출연자가 실제 동호회 활동에 참여하며 가입 전 고려되는 요소(분위기, 난이도, 재미)를 콘텐츠 안에서 간접 체험할 수 있도록 설계',
@@ -1347,7 +1354,7 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
                     <h4 className="text-xs font-bold uppercase tracking-widest text-black/30">ROLE</h4>
                   </div>
                   <div className="space-y-6">
-                    {(project.category === 'Key Project' || ['KBS 2TV <아침>', 'NAVER LIVE', '채널A'].includes(project.title)) && (
+                    {(project.category === 'Key Project' || ['KBS 2TV <아침>', 'NAVER LIVE', '채널A', 'SK telecom'].includes(project.title)) && (
                       <div className="text-[0.925rem] font-bold text-black/80 leading-relaxed markdown-content px-2">
                         <Markdown remarkPlugins={[remarkBreaks]}>{project.role}</Markdown>
                       </div>
