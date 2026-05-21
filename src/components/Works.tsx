@@ -1361,7 +1361,7 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
                     <h4 className="text-xs font-bold uppercase tracking-widest text-black/30">ROLE</h4>
                   </div>
                   <div className="space-y-6">
-                    {(project.category === 'Key Project' || ['KBS 2TV <아침>', 'NAVER LIVE', '채널A', 'SK telecom', 'KIA'].includes(project.title)) && (
+                    {(project.category === 'Key Project' || ['KBS 2TV <아침>', 'NAVER LIVE', '채널A', 'SK telecom'].includes(project.title)) && (
                       <div className="text-[0.925rem] font-bold text-black/80 leading-relaxed markdown-content px-2">
                         <Markdown remarkPlugins={[remarkBreaks]}>{project.role}</Markdown>
                       </div>
@@ -1375,27 +1375,29 @@ export const ProjectModal = ({ project, onClose }: { project: Project, onClose: 
                 </div>
 
                 {/* Video Links Card */}
-                <div className="bg-zinc-50 rounded-[2rem] p-8 border border-black/5">
-                  <h4 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">영상 링크</h4>
-                  <div className="space-y-2">
-                    {project.links.map((link, i) => {
-                      return (
-                        <a 
-                          key={i} 
-                          href={link.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-between p-4 rounded-xl bg-white border border-black/5 hover:border-emerald-200 transition-all group"
-                        >
-                          <span className="text-[10px] font-bold text-black/60 group-hover:text-emerald-600">
-                            {link.name}
-                          </span>
-                          <ArrowUpRight size={12} className="text-black/20 group-hover:text-emerald-600" />
-                        </a>
-                      );
-                    })}
+                {project.links && project.links.length > 0 && (
+                  <div className="bg-zinc-50 rounded-[2rem] p-8 border border-black/5">
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">영상 링크</h4>
+                    <div className="space-y-2">
+                      {project.links.map((link, i) => {
+                        return (
+                          <a 
+                            key={i} 
+                            href={link.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-between p-4 rounded-xl bg-white border border-black/5 hover:border-emerald-200 transition-all group"
+                          >
+                            <span className="text-[10px] font-bold text-black/60 group-hover:text-emerald-600">
+                              {link.name}
+                            </span>
+                            <ArrowUpRight size={12} className="text-black/20 group-hover:text-emerald-600" />
+                          </a>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           )}
