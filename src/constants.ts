@@ -279,6 +279,23 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     tags: ["숏폼", "IP 콘텐츠", "AI 퍼스트"]
   },
   {
+    title: "KIA",
+    category: "Brand Content",
+    role: "연출 100%\n편집 70%",
+    roleBreakdown: { planning: 0, filming: 100, editing: 70 },
+    description: "사내 고객 응대 교육 영상",
+    challenge: "사내 고객 응대 교육은 전달해야 할 정보가 많아\n구성에 따라 몰입도와 이해도가 크게 달라질 수 있었습니다.",
+    approach: "실제 응대 상황을 기반으로 한 드라마 형식의 교육 영상 기획 및 제작\n\n- 스토리텔링 구조를 활용해 교육 내용을 보다 직관적으로 전달할 수 있도록 구성\n- 배우 섭외, 스튜디오 촬영, 편집 및 자막 작업까지 콘텐츠 제작 전반 총괄 진행",
+    impact: [
+      "사내 교육 내용을 쉽고 몰입감 있게 전달할 수 있는 콘텐츠 제작",
+      "실무 상황 기반 연출을 통해 교육 이해도 향상",
+      "교육형 스토리텔링 콘텐츠 기획 및 제작 경험 확보"
+    ],
+    image: "https://github.com/wlgpwkdb-cell/LEEJH/blob/382ef3e112cd33493a3f9aeb01c63464fb9c26d1/%EC%9E%90%EC%82%B0%201%404x.png?raw=true",
+    links: [],
+    tags: ["사내 교육", "스토리텔링", "드라마"]
+  },
+  {
     title: "커머스/F&B 홍보 영상",
     category: "Brand Content",
     role: "기획 50% / 제작 100%",
