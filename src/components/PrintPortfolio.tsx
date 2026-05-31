@@ -72,164 +72,176 @@ export default function PrintPortfolio() {
           if (projects.length === 0) return null;
 
           return (
-            <div key={category} className="space-y-8 print-category-section">
+            <div 
+              key={category} 
+              className={`space-y-8 ${
+                category === PORTFOLIO_CATEGORIES[0] ? '' : 'print-category-section'
+              }`}
+            >
               <div className="border-l-4 border-emerald-600 pl-4 py-1 print-category-header">
                 <h3 className="text-xl font-extrabold text-zinc-900 uppercase tracking-tight">{category}</h3>
               </div>
 
               <div className="space-y-10">
-                {projects.map((project, idx) => (
-                  <article 
-                    key={project.title} 
-                    className={`bg-zinc-50 border border-zinc-200 rounded-3xl p-6 md:p-8 space-y-6 shadow-sm print-project-card ${
-                      idx === 0 ? 'print-project-card-first' : 'print-project-card-subsequent'
-                    }`}
-                  >
-                    {/* Project Title Block */}
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 border-b border-zinc-200 pb-4">
-                      <div>
-                        <h4 className="text-lg font-extrabold text-zinc-900">{project.title}</h4>
-                        <p className="text-xs text-zinc-500 font-bold uppercase mt-0.5">{project.description}</p>
-                      </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {project.tags?.map((tag, i) => (
-                          <span key={i} className="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                {projects.map((project, idx) => {
+                  // The very first project of the very first category should not start with a page break 
+                  // because we want it to stay with the main section title on page 2.
+                  // All other projects should start on their own fresh page.
+                  const isFirstCategory = category === PORTFOLIO_CATEGORIES[0];
+                  const shouldBreakBefore = !(isFirstCategory && idx === 0);
 
-                    {/* Image Placeholder or Actual Image */}
-                    {project.image && (
-                      <div className="w-full max-h-56 overflow-hidden rounded-xl bg-zinc-150 border border-zinc-200 flex justify-center items-center print-image-container">
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="object-cover w-full h-auto max-h-56 print-image" 
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                    )}
-
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                      {/* Contents Column */}
-                      <div className="md:col-span-8 space-y-4 text-xs text-zinc-800 leading-relaxed">
-                        
-                        {/* Challenge / Context Section */}
+                  return (
+                    <article 
+                      key={project.title} 
+                      className={`bg-zinc-50 border border-zinc-200 rounded-3xl p-6 md:p-8 space-y-6 shadow-sm print-project-card ${
+                        shouldBreakBefore ? 'print-project-card-subsequent' : 'print-project-card-first'
+                      }`}
+                    >
+                      {/* Project Title Block */}
+                      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 border-b border-zinc-200 pb-4">
                         <div>
-                          <strong className="block text-zinc-500 uppercase tracking-widest text-[9px] mb-1 font-extrabold">Challenge & Context</strong>
-                          <p className="whitespace-pre-line font-medium text-zinc-900 bg-white p-3 rounded-lg border border-zinc-100 shadow-sm-inset">
-                            {project.challenge || project.intent}
-                          </p>
+                          <h4 className="text-lg font-extrabold text-zinc-900">{project.title}</h4>
+                          <p className="text-xs text-zinc-500 font-bold uppercase mt-0.5">{project.description}</p>
                         </div>
-
-                        {/* Approach / Execution Section */}
-                        {project.approach && (
-                          <div>
-                            <strong className="block text-zinc-500 uppercase tracking-widest text-[9px] mb-1 font-extrabold">Approach & Plan</strong>
-                            <p className="whitespace-pre-line text-zinc-800 bg-white p-3 rounded-lg border border-zinc-100">
-                              {project.approach}
-                            </p>
-                          </div>
-                        )}
-
-                        {project.execution && project.execution.length > 0 && (
-                          <div>
-                            <strong className="block text-zinc-500 uppercase tracking-widest text-[9px] mb-1 font-extrabold">Execution Details</strong>
-                            <ul className="list-disc pl-5 space-y-1 font-medium">
-                              {project.execution.map((item, idx) => (
-                                <li key={idx} className="text-zinc-800">{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        {/* Impact & Performance Metrics */}
-                        {(project.impact || project.results) && (
-                          <div className="bg-emerald-50/50 border border-emerald-100 p-4 rounded-xl">
-                            <strong className="block text-emerald-700 uppercase tracking-widest text-[9px] mb-2 font-extrabold">Key Outcomes (성과/결과)</strong>
-                            <ul className="list-disc pl-5 space-y-1 font-extrabold text-emerald-950">
-                              {(project.impact || project.results || []).map((item, idx) => (
-                                <li key={idx}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                        <div className="flex flex-wrap gap-1.5">
+                          {project.tags?.map((tag, i) => (
+                            <span key={i} className="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
 
-                      {/* Info Metadata Column */}
-                      <div className="md:col-span-4 space-y-4">
-                        {/* Core Role Detail */}
-                        <div className="bg-white border border-zinc-200 rounded-xl p-4">
-                          <strong className="block text-zinc-400 uppercase tracking-widest text-[9px] mb-2 font-black">Role / Responsibilities</strong>
-                          <p className="text-xs font-extrabold text-zinc-900 whitespace-pre-line leading-relaxed mb-3">
-                            {project.role}
-                          </p>
-                          
-                          {/* Role breakdown visual representation for PDF */}
-                          {project.roleBreakdown && (
-                            <div className="border-t border-zinc-100 pt-3 space-y-2">
-                              {project.roleBreakdown.planning > 0 && (
-                                <div>
-                                  <div className="flex justify-between text-[10px] text-zinc-600 font-bold">
-                                    <span>기획</span>
-                                    <span>{project.roleBreakdown.planning}%</span>
+                      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                        {/* Left Info Column (Square Thumbnail + Role Info + Video Links) */}
+                        <div className="md:col-span-4 space-y-4">
+                          {project.image && (
+                            <div className="aspect-square w-full max-w-[140px] mx-auto md:mx-0 overflow-hidden rounded-xl bg-zinc-150 border border-zinc-200 flex justify-center items-center print-image-container">
+                              <img 
+                                src={project.image} 
+                                alt={project.title} 
+                                className="object-cover w-full h-full print-image" 
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                          )}
+
+                          {/* Core Role Detail */}
+                          <div className="bg-white border border-zinc-200 rounded-xl p-4">
+                            <strong className="block text-zinc-400 uppercase tracking-widest text-[9px] mb-2 font-black">Role / Responsibilities</strong>
+                            <p className="text-xs font-extrabold text-zinc-900 whitespace-pre-line leading-relaxed mb-3">
+                              {project.role}
+                            </p>
+                            
+                            {/* Role breakdown visual representation for PDF */}
+                            {project.roleBreakdown && (
+                              <div className="border-t border-zinc-100 pt-3 space-y-2">
+                                {project.roleBreakdown.planning > 0 && (
+                                  <div>
+                                    <div className="flex justify-between text-[10px] text-zinc-600 font-bold">
+                                      <span>기획</span>
+                                      <span>{project.roleBreakdown.planning}%</span>
+                                    </div>
+                                    <div className="w-full bg-zinc-100 h-1.5 rounded-full mt-0.5">
+                                      <div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: `${project.roleBreakdown.planning}%` }} />
+                                    </div>
                                   </div>
-                                  <div className="w-full bg-zinc-100 h-1.5 rounded-full mt-0.5">
-                                    <div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: `${project.roleBreakdown.planning}%` }} />
+                                )}
+                                {project.roleBreakdown.filming > 0 && (
+                                  <div>
+                                    <div className="flex justify-between text-[10px] text-zinc-600 font-bold">
+                                      <span>{['덕분TV', '퇴근하GO', '대명 아임레디', 'KIA'].includes(project.title) ? '연출' : '촬영'}</span>
+                                      <span>{project.roleBreakdown.filming}%</span>
+                                    </div>
+                                    <div className="w-full bg-zinc-100 h-1.5 rounded-full mt-0.5">
+                                      <div className="bg-blue-500 h-1.5 rounded-full" style={{ width: `${project.roleBreakdown.filming}%` }} />
+                                    </div>
                                   </div>
-                                </div>
-                              )}
-                              {project.roleBreakdown.filming > 0 && (
-                                <div>
-                                  <div className="flex justify-between text-[10px] text-zinc-600 font-bold">
-                                    <span>{['덕분TV', '퇴근하GO', '대명 아임레디', 'KIA'].includes(project.title) ? '연출' : '촬영'}</span>
-                                    <span>{project.roleBreakdown.filming}%</span>
+                                )}
+                                {project.roleBreakdown.editing > 0 && (
+                                  <div>
+                                    <div className="flex justify-between text-[10px] text-zinc-600 font-bold">
+                                      <span>편집</span>
+                                      <span>{project.roleBreakdown.editing}%</span>
+                                    </div>
+                                    <div className="w-full bg-zinc-100 h-1.5 rounded-full mt-0.5">
+                                      <div className="bg-purple-500 h-1.5 rounded-full" style={{ width: `${project.roleBreakdown.editing}%` }} />
+                                    </div>
                                   </div>
-                                  <div className="w-full bg-zinc-100 h-1.5 rounded-full mt-0.5">
-                                    <div className="bg-blue-500 h-1.5 rounded-full" style={{ width: `${project.roleBreakdown.filming}%` }} />
-                                  </div>
-                                </div>
-                              )}
-                              {project.roleBreakdown.editing > 0 && (
-                                <div>
-                                  <div className="flex justify-between text-[10px] text-zinc-600 font-bold">
-                                    <span>편집</span>
-                                    <span>{project.roleBreakdown.editing}%</span>
-                                  </div>
-                                  <div className="w-full bg-zinc-100 h-1.5 rounded-full mt-0.5">
-                                    <div className="bg-purple-500 h-1.5 rounded-full" style={{ width: `${project.roleBreakdown.editing}%` }} />
-                                  </div>
-                                </div>
-                              )}
+                                )}
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Project Video Links (Actual interactive clickable PDF anchors) */}
+                          {project.links && project.links.length > 0 && (
+                            <div className="bg-zinc-100 border border-zinc-200 rounded-xl p-4 space-y-2">
+                              <strong className="block text-zinc-400 uppercase tracking-widest text-[9px] mb-1 font-black">프로젝트 링크 (View Video)</strong>
+                              <div className="space-y-1.5">
+                                {project.links.map((link, idx) => (
+                                  <a 
+                                    key={idx}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block text-[11px] font-bold text-emerald-800 hover:text-emerald-600 hover:underline cursor-pointer"
+                                  >
+                                    🔗 {link.name}
+                                  </a>
+                                ))}
+                              </div>
                             </div>
                           )}
                         </div>
 
-                        {/* Project Video Links (Actual interactive clickable PDF anchors) */}
-                        {project.links && project.links.length > 0 && (
-                          <div className="bg-zinc-100 border border-zinc-200 rounded-xl p-4 space-y-2">
-                            <strong className="block text-zinc-400 uppercase tracking-widest text-[9px] mb-1 font-black">프로젝트 링크 (View Video)</strong>
-                            <div className="space-y-1.5">
-                              {project.links.map((link, idx) => (
-                                <a 
-                                  key={idx}
-                                  href={link.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block text-[11px] font-bold text-emerald-800 hover:text-emerald-600 hover:underline cursor-pointer"
-                                >
-                                  🔗 {link.name}
-                                </a>
-                              ))}
-                            </div>
+                        {/* Right Column: Case Contents */}
+                        <div className="md:col-span-8 space-y-4 text-xs text-zinc-800 leading-relaxed">
+                          
+                          {/* Challenge / Context Section */}
+                          <div>
+                            <strong className="block text-zinc-500 uppercase tracking-widest text-[9px] mb-1 font-extrabold">Challenge & Context</strong>
+                            <p className="whitespace-pre-line font-medium text-zinc-900 bg-white p-3 rounded-lg border border-zinc-100 shadow-sm-inset">
+                              {project.challenge || project.intent}
+                            </p>
                           </div>
-                        )}
+
+                          {/* Approach / Execution Section */}
+                          {project.approach && (
+                            <div>
+                              <strong className="block text-zinc-500 uppercase tracking-widest text-[9px] mb-1 font-extrabold">Approach & Plan</strong>
+                              <p className="whitespace-pre-line text-zinc-800 bg-white p-3 rounded-lg border border-zinc-100">
+                                {project.approach}
+                              </p>
+                            </div>
+                          )}
+
+                          {project.execution && project.execution.length > 0 && (
+                            <div>
+                              <strong className="block text-zinc-500 uppercase tracking-widest text-[9px] mb-1 font-extrabold">Execution Details</strong>
+                              <ul className="list-disc pl-5 space-y-1 font-medium">
+                                {project.execution.map((item, idx) => (
+                                  <li key={idx} className="text-zinc-800">{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {/* Impact & Performance Metrics */}
+                          {(project.impact || project.results) && (
+                            <div className="bg-emerald-50/50 border border-emerald-100 p-4 rounded-xl">
+                              <strong className="block text-emerald-700 uppercase tracking-widest text-[9px] mb-2 font-extrabold">Key Outcomes (성과/결과)</strong>
+                              <ul className="list-disc pl-5 space-y-1 font-extrabold text-emerald-950">
+                                {(project.impact || project.results || []).map((item, idx) => (
+                                  <li key={idx}>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                ))}
+                    </article>
+                  );
+                })}
               </div>
             </div>
           );

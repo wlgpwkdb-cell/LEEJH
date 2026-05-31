@@ -275,7 +275,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       "숏폼 환경에 최적화된 정보 콘텐츠 포맷 구축"
     ],
     image: "https://img.youtube.com/vi/3BZr1SNe9gs/hqdefault.jpg",
-    links: [{ name: "요금안내서, 다섯 가지만 기억하세요", url: "https://youtu.be/3BZr1SNe9gs?si=FamAWjIg0k7ApLIk" }],
+    links: [
+      { name: "요금안내서, 다섯 가지만 기억하세요", url: "https://youtu.be/3BZr1SNe9gs?si=FamAWjIg0k7ApLIk" },
+      { name: "PASS인증서, 다섯 가지만 기억하세요", url: "https://youtu.be/TtLS-GZerec" }
+    ],
     tags: ["숏폼", "IP 콘텐츠", "AI 퍼스트"]
   },
   {
