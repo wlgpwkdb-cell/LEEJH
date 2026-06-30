@@ -1,6 +1,7 @@
 import React from 'react';
 import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES, HERO_CONTENT, ABOUT_CONTENT, CORE_EXPERTISE } from '../constants';
 import { Project } from '../types';
+import { HIGHLIGHTS_DATA } from './CareerHighlights';
 
 export default function PrintPortfolio() {
   return (
@@ -55,14 +56,57 @@ export default function PrintPortfolio() {
         </div>
       </section>
 
-      {/* Page break before works section inside PDF */}
-      <div className="page-break my-8" />
+      {/* Career Highlights Section - fits exactly on Page 2 in PDF */}
+      <section className="print-category-section py-4 avoid-break">
+        <div className="mb-4">
+          <span className="text-[10px] uppercase tracking-widest font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
+            Curated Milestones
+          </span>
+          <h2 className="text-2xl font-black text-zinc-900 mt-1 pb-1.5 border-b border-zinc-200 uppercase tracking-tight">
+            CAREER HIGHLIGHTS (대표 성과)
+          </h2>
+        </div>
+ 
+        <div className="overflow-visible border border-zinc-300 rounded-lg bg-white">
+          <table className="w-full text-left border-collapse text-[10px]">
+            <thead>
+              <tr className="bg-zinc-100 border-b border-zinc-300">
+                <th className="py-2.5 px-3 font-black uppercase text-zinc-600 tracking-wider w-[22%]">역량</th>
+                <th className="py-2.5 px-3 font-black uppercase text-zinc-600 tracking-wider w-[23%]">프로젝트</th>
+                <th className="py-2.5 px-3 font-black uppercase text-zinc-600 tracking-wider w-[35%]">나의 역할</th>
+                <th className="py-2.5 px-3 font-black uppercase text-zinc-600 tracking-wider w-[20%]">핵심 성과</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-zinc-200">
+              {HIGHLIGHTS_DATA.map((item) => (
+                <tr key={item.id} className="align-top avoid-break">
+                  <td className="py-2.5 px-3 font-extrabold text-emerald-800 bg-emerald-50/20 border-r border-zinc-100">
+                    {item.competency}
+                  </td>
+                  <td className="py-2.5 px-3 border-r border-zinc-100 font-extrabold text-zinc-900">
+                    {item.project}
+                  </td>
+                  <td className="py-2.5 px-3 text-zinc-700 leading-relaxed font-semibold border-r border-zinc-100">
+                    {item.role}
+                  </td>
+                  <td className="py-2.5 px-3 bg-emerald-50/10 text-emerald-950 font-black leading-relaxed">
+                    {item.result}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-      {/* Works Section Title */}
-      <div className="mb-8">
-        <span className="text-xs uppercase tracking-widest font-extrabold text-zinc-400">Section 2</span>
-        <h1 className="text-3xl font-extrabold tracking-tight uppercase text-zinc-900">Portfolio Works</h1>
-        <p className="text-xs text-zinc-500 mt-1">이하 각 프로젝트의 기획 의도, 수행 내용, 성과 및 결과물을 상세 수록하였습니다. (링크를 클릭하시면 클립 영상으로 이동합니다.)</p>
+      {/* Works Section Title - Full Page Section Divider for Print */}
+      <div className="print-category-section py-20 flex flex-col justify-center min-h-[60vh] avoid-break">
+        <span className="text-xs uppercase tracking-widest font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100 w-max mb-3">Section 2</span>
+        <h1 className="text-4xl font-extrabold tracking-tight uppercase text-zinc-900">Portfolio Works</h1>
+        <p className="text-sm text-zinc-600 mt-3 max-w-xl leading-relaxed font-medium">
+          이하 각 프로젝트의 기획 의도, 수행 내용, 성과 및 결과물을 상세 수록하였습니다. 
+          각 프로젝트 카드의 링크를 클릭하시면 클립 영상 및 관련 포트폴리오 사이트로 바로 이동하실 수 있습니다.
+        </p>
       </div>
 
       {/* Works & Categories list */}
@@ -74,9 +118,7 @@ export default function PrintPortfolio() {
           return (
             <div 
               key={category} 
-              className={`space-y-8 ${
-                category === PORTFOLIO_CATEGORIES[0] ? '' : 'print-category-section'
-              }`}
+              className="space-y-8 print-category-section"
             >
               <div className="border-l-4 border-emerald-600 pl-4 py-1 print-category-header">
                 <h3 className="text-xl font-extrabold text-zinc-900 uppercase tracking-tight">{category}</h3>
@@ -84,11 +126,9 @@ export default function PrintPortfolio() {
 
               <div className="space-y-10">
                 {projects.map((project, idx) => {
-                  // The very first project of the very first category should not start with a page break 
-                  // because we want it to stay with the main section title on page 2.
-                  // All other projects should start on their own fresh page.
-                  const isFirstCategory = category === PORTFOLIO_CATEGORIES[0];
-                  const shouldBreakBefore = !(isFirstCategory && idx === 0);
+                  // The first project stays on the same page as the category title (which starts on a new page).
+                  // All subsequent projects in the category start on their own brand new pages.
+                  const shouldBreakBefore = idx > 0;
 
                   return (
                     <article 

@@ -15,6 +15,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8 text-sm font-medium text-black/60">
           {[
             { label: 'About', href: '#expertise' },
+            { label: 'Highlights', href: '#highlights' },
             { label: 'Key Project', href: '#key-projects' },
             { label: 'Works', href: '#works' },
             { label: 'Workflow', href: '#process' },

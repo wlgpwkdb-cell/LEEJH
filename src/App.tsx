@@ -7,6 +7,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import { Expertise } from './components/About';
+import CareerHighlights from './components/CareerHighlights';
 import KeyProjects from './components/KeyProjects';
 import Works from './components/Works';
 import { Process, Contact } from './components/Contact';
@@ -26,6 +27,7 @@ export default function App() {
         <main>
           <Hero />
           <Expertise />
+          <CareerHighlights />
           <KeyProjects />
           <Works />
           <Process />

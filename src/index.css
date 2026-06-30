@@ -218,14 +218,21 @@ body {
     padding: 1.25rem !important;
   }
 
-  /* Force images to be very compact on print so that everything fits on one single page */
+  /* Force images to be very compact small squares on print so that everything fits on one single page */
   .print-image-container {
-    max-height: 130px !important;
-    margin-bottom: 0.75rem !important;
+    width: 120px !important;
+    height: 120px !important;
+    max-height: 120px !important;
+    aspect-ratio: 1 / 1 !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: 0.75rem !important;
+    overflow: hidden !important;
   }
 
   .print-image {
-    max-height: 130px !important;
+    width: 120px !important;
+    height: 120px !important;
+    max-height: 120px !important;
     object-fit: cover !important;
   }
 
